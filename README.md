@@ -14,3 +14,5 @@ The project has various jupyter notebook folders that correspond to the experien
 
 - [Elite](./coursework/elite.md)
   > With this elite preparation level, you'll be ready for the most challenging technical interviews at any company, including quantitative trading firms, advanced AI research positions, and senior+ roles at top tech companies. Your preparation will rival computer science PhD candidates and competitive programming experts.
+
+Also, here's [guide](./resources/patterns-and-techniques.ipynb) for general patterns and techiques for solving problems.
