@@ -1,0 +1,6 @@
+{
+  "tasks": {
+    "notebook:json": "deno run --allow-read --allow-write ./bin/make-notebook.ts",
+    "notebook:yaml": "deno run --allow-read --allow-write ./bin/make-notebook.ts"
+  }
+}

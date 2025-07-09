@@ -1,0 +1,220 @@
+notebooks:
+  - metadata:
+      title: Find Minimum in Rotated Sorted Array II
+      filename: "154-find-minimum-in-rotated-sorted-array-ii.ipynb"
+      author: YourName
+    cells:
+      - type: markdown
+        content: |
+          # Find Minimum in Rotated Sorted Array II
+          [Find Minimum in Rotated Sorted Array II](https://leetcode.com/problems/find-minimum-in-rotated-sorted-array-ii/)
+
+          Handle duplicates in modified binary search.
+      - type: code
+        content: |
+          // Implementation here
+      - type: code
+        content: |
+          Deno.test("Find Minimum in Rotated Sorted Array II - Basic", () => {
+            // Separate assertions here
+          })
+
+  - metadata:
+      title: Search a 2D Matrix II
+      filename: "240-search-a-2d-matrix-ii.ipynb"
+      author: YourName
+    cells:
+      - type: markdown
+        content: |
+          # Search a 2D Matrix II
+          [Search a 2D Matrix II](https://leetcode.com/problems/search-a-2d-matrix-ii/)
+
+          2D matrix search starting from top-right corner.
+      - type: code
+        content: |
+          // Implementation here
+      - type: code
+        content: |
+          Deno.test("Search a 2D Matrix II - Basic", () => {
+            // Separate assertions here
+          })
+
+  - metadata:
+      title: Median of Two Sorted Arrays
+      filename: "4-median-of-two-sorted-arrays.ipynb"
+      author: YourName
+    cells:
+      - type: markdown
+        content: |
+          # Median of Two Sorted Arrays
+          [Median of Two Sorted Arrays](https://leetcode.com/problems/median-of-two-sorted-arrays/)
+
+          Binary search partition method.
+      - type: code
+        content: |
+          // Implementation here
+      - type: code
+        content: |
+          Deno.test("Median of Two Sorted Arrays - Basic", () => {
+            // Separate assertions here
+          })
+
+  - metadata:
+      title: Kth Smallest Element in a Sorted Matrix
+      filename: "378-kth-smallest-element-in-a-sorted-matrix.ipynb"
+      author: YourName
+    cells:
+      - type: markdown
+        content: |
+          # Kth Smallest Element in a Sorted Matrix
+          [Kth Smallest Element in a Sorted Matrix](https://leetcode.com/problems/kth-smallest-element-in-a-sorted-matrix/)
+
+          Binary search on value range.
+      - type: code
+        content: |
+          // Implementation here
+      - type: code
+        content: |
+          Deno.test("Kth Smallest Element in a Sorted Matrix - Basic", () => {
+            // Separate assertions here
+          })
+
+  - metadata:
+      title: Split Array Largest Sum
+      filename: "410-split-array-largest-sum.ipynb"
+      author: YourName
+    cells:
+      - type: markdown
+        content: |
+          # Split Array Largest Sum
+          [Split Array Largest Sum](https://leetcode.com/problems/split-array-largest-sum/)
+
+          Binary search on the largest sum threshold.
+      - type: code
+        content: |
+          // Implementation here
+      - type: code
+        content: |
+          Deno.test("Split Array Largest Sum - Basic", () => {
+            // Separate assertions here
+          })
+
+  - metadata:
+      title: Binary Tree Maximum Path Sum
+      filename: "124-binary-tree-maximum-path-sum.ipynb"
+      author: YourName
+    cells:
+      - type: markdown
+        content: |
+          # Binary Tree Maximum Path Sum
+          [Binary Tree Maximum Path Sum](https://leetcode.com/problems/binary-tree-maximum-path-sum/)
+
+          DFS to find max gain and global max path sum.
+      - type: code
+        content: |
+          // Implementation here
+      - type: code
+        content: |
+          Deno.test("Binary Tree Maximum Path Sum - Basic", () => {
+            // Separate assertions here
+          })
+
+  - metadata:
+      title: Count Complete Tree Nodes
+      filename: "222-count-complete-tree-nodes.ipynb"
+      author: YourName
+    cells:
+      - type: markdown
+        content: |
+          # Count Complete Tree Nodes
+          [Count Complete Tree Nodes](https://leetcode.com/problems/count-complete-tree-nodes/)
+
+          Binary depth count for O(log² n) complexity.
+      - type: code
+        content: |
+          // Implementation here
+      - type: code
+        content: |
+          Deno.test("Count Complete Tree Nodes - Basic", () => {
+            // Separate assertions here
+          })
+
+  - metadata:
+      title: Construct Binary Tree from Preorder and Inorder Traversal
+      filename: "105-construct-binary-tree-from-preorder-and-inorder-traversal.ipynb"
+      author: YourName
+    cells:
+      - type: markdown
+        content: |
+          # Construct Binary Tree from Preorder and Inorder Traversal
+          [Construct Binary Tree from Preorder and Inorder Traversal](https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/)
+
+          Recursively divide preorder/inorder arrays.
+      - type: code
+        content: |
+          // Implementation here
+      - type: code
+        content: |
+          Deno.test("Construct Binary Tree - Basic", () => {
+            // Separate assertions here
+          })
+
+  - metadata:
+      title: Serialize and Deserialize Binary Tree
+      filename: "297-serialize-and-deserialize-binary-tree.ipynb"
+      author: YourName
+    cells:
+      - type: markdown
+        content: |
+          # Serialize and Deserialize Binary Tree
+          [Serialize and Deserialize Binary Tree](https://leetcode.com/problems/serialize-and-deserialize-binary-tree/)
+
+          Preorder traversal with null markers.
+      - type: code
+        content: |
+          // Implementation here
+      - type: code
+        content: |
+          Deno.test("Serialize/Deserialize - Basic", () => {
+            // Separate assertions here
+          })
+
+  - metadata:
+      title: Binary Tree Cameras
+      filename: "968-binary-tree-cameras.ipynb"
+      author: YourName
+    cells:
+      - type: markdown
+        content: |
+          # Binary Tree Cameras
+          [Binary Tree Cameras](https://leetcode.com/problems/binary-tree-cameras/)
+
+          Greedy tree DP with camera placement states.
+      - type: code
+        content: |
+          // Implementation here
+      - type: code
+        content: |
+          Deno.test("Binary Tree Cameras - Basic", () => {
+            // Separate assertions here
+          })
+
+  - metadata:
+      title: Recover Binary Search Tree
+      filename: "99-recover-binary-search-tree.ipynb"
+      author: YourName
+    cells:
+      - type: markdown
+        content: |
+          # Recover Binary Search Tree
+          [Recover Binary Search Tree](https://leetcode.com/problems/recover-binary-search-tree/)
+
+          Inorder traversal to detect swapped nodes.
+      - type: code
+        content: |
+          // Implementation here
+      - type: code
+        content: |
+          Deno.test("Recover BST - Basic", () => {
+            // Separate assertions here
+          })

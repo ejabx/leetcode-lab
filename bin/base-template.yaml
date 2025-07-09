@@ -1,0 +1,35 @@
+metadata:
+  title: Problem
+  author: Me
+  kernelspec:
+    name: typescript
+    display_name: TypeScript
+    language: TypeScript
+cells:
+  - type: markdown
+    content: |-
+      # [TKTKTK]()
+      TKTKTK
+      ## Strategy
+      - TKTKTK
+    metadata:
+      tags: []
+  - type: markdown
+    content: |
+      ## Solution
+  - type: code
+    content: |-
+      function fib(n: number): number {
+        if (n <= 1) return n
+        return fib(n - 2) + fib(n - 1)
+      };
+  - type: markdown
+    content: |
+      ## Test Cases
+  - type: code
+    content: |-
+      import { assertEquals } from "https://deno.land/std/testing/asserts.ts";
+
+      Deno.test("fib(5)", () => {
+        assertEquals(fib(5), 5);
+      });

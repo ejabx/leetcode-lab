@@ -26,11 +26,9 @@ export class ListNode {
     }
     return result;
   }
-
-
 }
 
-type Pair<T,K> = [T,K];
+export type Pair<T,K> = [T,K];
 
 export class RandomListNode {
   val: number;
