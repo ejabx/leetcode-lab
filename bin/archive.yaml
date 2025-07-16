@@ -1,0 +1,508 @@
+notebooks:
+  - metadata:
+      title: "Coin Change"
+      filename: "322-coin-change.ipynb"
+    cells:
+      - type: markdown
+        content: |
+          # [Coin Change](https://leetcode.com/problems/coin-change/)
+
+          Given a set of coin denominations and a target amount, determine the minimum number of coins required to make up that amount.  
+          If it's not possible to form the amount with the given coins, return -1.
+
+          ## Strategy
+
+          This is a classic dynamic programming problem. You can approach it in multiple ways:
+
+          - **Bottom-Up DP (Tabulation):** Build up a solution iteratively.
+          - **Top-Down DP (Memoization):** Solve recursively and cache subproblem results.
+        metadata:
+          tags: [Array, Dynamic Programming, Memoization, Tabulation]
+
+      - type: markdown
+        content: |
+          ## Bottom-Up DP (Tabulation)
+
+          - Use a DP array `dp[i]` where `i` is the current amount and `dp[i]` is the fewest coins needed.
+          - Initialize `dp[0] = 0` and all other entries to `Infinity`.
+          - For each coin and for each amount from the coin's value up to the target, update:
+            ```ts
+            dp[i] = Math.min(dp[i], dp[i - coin] + 1);
+            ```
+          - Return `dp[amount]` if it's not `Infinity`, otherwise `-1`.
+
+          **Time complexity:** O(amount × number of coins)  
+          **Space complexity:** O(amount)
+
+      - type: code
+        language: typescript
+        content: |
+          export function coinChange(coins: number[], amount: number): number {
+            const dp = new Array(amount + 1).fill(Infinity);
+            dp[0] = 0;
+
+            for (const coin of coins) {
+              for (let i = coin; i <= amount; i++) {
+                dp[i] = Math.min(dp[i], dp[i - coin] + 1);
+              }
+            }
+
+            return dp[amount] === Infinity ? -1 : dp[amount];
+          }
+
+      - type: markdown
+        content: |
+          ## Top-Down DP (Memoization)
+
+          - Use recursion to try every combination.
+          - Cache results with memoization to avoid redundant computation.
+          - Base case: if amount is 0, return 0.
+          - If no combination leads to a solution, return -1.
+
+          **Time complexity:** O(amount × number of coins)  
+          **Space complexity:** O(amount)
+
+      - type: code
+        language: typescript
+        content: |
+          export function coinChangeMemo(coins: number[], amount: number): number {
+            const memo = new Map<number, number>();
+
+            function dp(rem: number): number {
+              if (rem === 0) return 0;
+              if (rem < 0) return Infinity;
+              if (memo.has(rem)) return memo.get(rem)!;
+
+              let min = Infinity;
+              for (const coin of coins) {
+                min = Math.min(min, dp(rem - coin) + 1);
+              }
+
+              memo.set(rem, min);
+              return min;
+            }
+
+            const res = dp(amount);
+            return res === Infinity ? -1 : res;
+          }
+
+      - type: markdown
+        content: |
+          ## Test Cases
+
+      - type: code
+        language: typescript
+        content: |
+          import { assertEquals } from "https://deno.land/std/testing/asserts.ts";
+          import { coinChange } from "./322-coin-change.ts";
+          import { coinChangeMemo } from "./322-coin-change.ts";
+
+          const cases = [
+            { coins: [1, 2, 5], amount: 11, expected: 3 },
+            { coins: [2], amount: 3, expected: -1 },
+            { coins: [3], amount: 3, expected: 1 },
+            { coins: [5, 2, 1], amount: 7, expected: 2 },
+            { coins: [1, 2, 5], amount: 0, expected: 0 },
+            { coins: [7, 14], amount: 49, expected: 7 },
+            { coins: [10], amount: 5, expected: -1 },
+            { coins: [1, 3, 4], amount: 6, expected: 2 },
+          ];
+
+          for (const { coins, amount, expected } of cases) {
+            Deno.test(`Bottom-Up: ${coins} → ${amount}`, () => {
+              assertEquals(coinChange(coins, amount), expected);
+            });
+            Deno.test(`Top-Down: ${coins} → ${amount}`, () => {
+              assertEquals(coinChangeMemo(coins, amount), expected);
+            });
+          }
+  - metadata:
+      title: "Search in Rotated Sorted Array"
+      filename: "033-search-in-rotated-sorted-array.ipynb"
+    cells:
+      - type: markdown
+        content: |
+          # Search in Rotated Sorted Array
+          [LeetCode 33](https://leetcode.com/problems/search-in-rotated-sorted-array/)
+      - type: markdown
+        content: |
+          ## Description
+          Given a sorted array that has been rotated at some pivot unknown beforehand,
+          find the index of a target value in O(log n) time.
+          If the target is not found, return -1.
+      - type: markdown
+        content: |
+          ## Strategy
+          Use a modified binary search:
+          - At each iteration, check which side (left or right) is normally sorted.
+          - If the target lies within the sorted half, continue searching there; otherwise, search the other half.
+          - Repeat until the target is found or the search space is empty.
+
+          Time complexity: O(log n)  
+          Space complexity: O(1)
+      - type: code
+        content: |
+          export function search(nums: number[], target: number): number {
+            return 0;
+          }
+      - type: code
+        content: |
+          import { assertEquals } from "https://deno.land/std/testing/asserts.ts";
+
+          Deno.test("Search - Target Found", () => {
+            assertEquals(search([4,5,6,7,0,1,2], 0), 4);
+          });
+
+          Deno.test("Search - Target Not Found", () => {
+            assertEquals(search([4,5,6,7,0,1,2], 3), -1);
+          });
+
+          Deno.test("Search - No Rotation", () => {
+            assertEquals(search([1,2,3,4,5,6], 4), 3);
+          });
+
+          Deno.test("Search - Single Element Found", () => {
+            assertEquals(search([1], 1), 0);
+          });
+
+          Deno.test("Search - Single Element Not Found", () => {
+            assertEquals(search([1], 0), -1);
+          });
+  - metadata:
+      title: "Binary Tree Maximum Path Sum"
+      filename: "124-binary-tree-maximum-path-sum.ipynb"
+    cells:
+      - type: markdown
+        content: |
+          # Binary Tree Maximum Path Sum
+          [LeetCode 124](https://leetcode.com/problems/binary-tree-maximum-path-sum/)
+      - type: markdown
+        content: |
+          ## Description
+          Find the maximum path sum in a binary tree, where the path may start and end at any node.
+          The path must contain at least one node.
+      - type: markdown
+        content: |
+          ## Strategy
+          Use a DFS approach:
+          - Traverse the tree recursively.
+          - At each node, compute the maximum gain from left and right subtrees.
+          - Update the global max path sum considering paths through the current node.
+          - Return the maximum gain to parent for use in higher recursive calls.
+
+          Time complexity: O(n)  
+          Space complexity: O(h), where h is the height of the tree
+      - type: code
+        content: |
+          export class TreeNode {
+            val: number;
+            left: TreeNode | null;
+            right: TreeNode | null;
+            constructor(val?: number, left?: TreeNode | null, right?: TreeNode | null) {
+              this.val = val === undefined ? 0 : val;
+              this.left = left === undefined ? null : left;
+              this.right = right === undefined ? null : right;
+            }
+          }
+
+          export function maxPathSum(root: TreeNode | null): number {
+            return 0;
+          }
+      - type: code
+        content: |
+          import { assertEquals } from "https://deno.land/std/testing/asserts.ts";
+
+          Deno.test("Max Path Sum - Simple Tree", () => {
+            const root = new TreeNode(-10, new TreeNode(9), new TreeNode(20, new TreeNode(15), new TreeNode(7)));
+            assertEquals(maxPathSum(root), 42);
+          });
+
+          Deno.test("Max Path Sum - Single Node", () => {
+            const root = new TreeNode(1);
+            assertEquals(maxPathSum(root), 1);
+          });
+
+          Deno.test("Max Path Sum - Negative Nodes", () => {
+            const root = new TreeNode(-3);
+            assertEquals(maxPathSum(root), -3);
+          });
+
+          Deno.test("Max Path Sum - Left Skewed Tree", () => {
+            const root = new TreeNode(2, new TreeNode(-1));
+            assertEquals(maxPathSum(root), 2);
+          });
+  - metadata:
+      title: "Longest Increasing Subsequence"
+      filename: "300-longest-increasing-subsequence.ipynb"
+    cells:
+      - type: markdown
+        content: |
+          # Longest Increasing Subsequence
+          [LeetCode 300](https://leetcode.com/problems/longest-increasing-subsequence/)
+      - type: markdown
+        content: |
+          ## Description
+          Given an integer array, find the length of the longest strictly increasing subsequence.
+      - type: markdown
+        content: |
+          ## Strategy
+          Use dynamic programming or patience sorting:
+          - For DP: For each element, find the length of the LIS ending at that element.
+          - For patience sorting (binary search approach): Maintain an array tracking smallest tail of increasing subsequences.
+          - The length of the array at the end is the length of the LIS.
+
+          Time complexity: O(n log n)  
+          Space complexity: O(n)
+      - type: code
+        content: |
+          export function lengthOfLIS(nums: number[]): number {
+            return 0;
+          }
+      - type: code
+        content: |
+          import { assertEquals } from "https://deno.land/std/testing/asserts.ts";
+
+          Deno.test("LIS - General Case", () => {
+            assertEquals(lengthOfLIS([10,9,2,5,3,7,101,18]), 4);
+          });
+
+          Deno.test("LIS - Strictly Increasing", () => {
+            assertEquals(lengthOfLIS([1,2,3,4,5]), 5);
+          });
+
+          Deno.test("LIS - All Same Elements", () => {
+            assertEquals(lengthOfLIS([7,7,7,7]), 1);
+          });
+
+          Deno.test("LIS - Empty Array", () => {
+            assertEquals(lengthOfLIS([]), 0);
+          });
+
+          Deno.test("LIS - Single Element", () => {
+            assertEquals(lengthOfLIS([10]), 1);
+          });
+  - metadata:
+      title: "Course Schedule II"
+      filename: "210-course-schedule-ii.ipynb"
+    cells:
+      - type: markdown
+        content: |
+          # [Course Schedule II](https://leetcode.com/problems/course-schedule-ii/)
+          ## Description
+          Given a number of courses and a list of prerequisites, return an ordering of courses you can take to finish all.
+          If it's not possible, return an empty array.
+          ## Strategy
+          Use topological sort via BFS (Kahn's algorithm) or DFS with cycle detection.
+          Maintain an adjacency list and track indegrees.
+      - type: code
+        content: |
+          export function findOrder(numCourses: number, prerequisites: number[][]): number[] {
+            return [];
+          }
+      - type: code
+        content: |
+          import { assertEquals } from "https://deno.land/std/testing/asserts.ts";
+
+          Deno.test("Course Order - Possible", () => {
+            assertEquals(findOrder(2, [[1,0]]), [0,1]);
+          });
+
+          Deno.test("Course Order - Not Possible", () => {
+            assertEquals(findOrder(2, [[1,0],[0,1]]), []);
+          });
+
+          Deno.test("Course Order - Multiple Paths", () => {
+            const res = findOrder(4, [[1,0],[2,0],[3,1],[3,2]]);
+            assertEquals(new Set(res), new Set([0,1,2,3]));
+          });
+  - metadata:
+      title: "Number of Islands II"
+      filename: "305-number-of-islands-ii.ipynb"
+    cells:
+      - type: markdown
+        content: |
+          # [Number of Islands II](https://leetcode.com/problems/number-of-islands-ii/)
+          ## Description
+          Given a 2D grid that starts as water, add land incrementally and return the number of islands after each addition.
+          ## Strategy
+          Use Union Find (Disjoint Set Union) to merge land patches and count distinct roots.
+      - type: code
+        content: |
+          export function numIslands2(m: number, n: number, positions: number[][]): number[] {
+            return [];
+          }
+      - type: code
+        content: |
+          import { assertEquals } from "https://deno.land/std/testing/asserts.ts";
+
+          Deno.test("Islands II - Basic", () => {
+            assertEquals(numIslands2(3, 3, [[0,0],[0,1],[1,2],[2,1]]), [1,1,2,3]);
+          });
+
+          Deno.test("Islands II - Merge", () => {
+            assertEquals(numIslands2(3, 3, [[0,0],[0,1],[1,2],[1,1]]), [1,1,2,1]);
+          });
+  - metadata:
+      title: "Meeting Rooms II"
+      filename: "253-meeting-rooms-ii.ipynb"
+    cells:
+      - type: markdown
+        content: |
+          # [Meeting Rooms II](https://leetcode.com/problems/meeting-rooms-ii/)
+          ## Description
+          Find the minimum number of conference rooms required to hold all meetings given as time intervals.
+          ## Strategy
+          Sort start and end times separately and use a two-pointer scan to track overlap.
+      - type: code
+        content: |
+          export function minMeetingRooms(intervals: number[][]): number {
+            return 0;
+          }
+      - type: code
+        content: |
+          import { assertEquals } from "https://deno.land/std/testing/asserts.ts";
+
+          Deno.test("Meeting Rooms - Overlap", () => {
+            assertEquals(minMeetingRooms([[0,30],[5,10],[15,20]]), 2);
+          });
+
+          Deno.test("Meeting Rooms - No Overlap", () => {
+            assertEquals(minMeetingRooms([[7,10],[2,4]]), 1);
+          });
+  - metadata:
+      title: "Edit Distance"
+      filename: "072-edit-distance.ipynb"
+    cells:
+      - type: markdown
+        content: |
+          # [Edit Distance](https://leetcode.com/problems/edit-distance/)
+          ## Description
+          Compute the minimum number of operations required to convert one word to another using insert, delete, or replace.
+          ## Strategy
+          Use 2D DP table where dp[i][j] = edit distance between first i and j chars.
+      - type: code
+        content: |
+          export function minDistance(word1: string, word2: string): number {
+            return 0;
+          }
+      - type: code
+        content: |
+          import { assertEquals } from "https://deno.land/std/testing/asserts.ts";
+
+          Deno.test("Edit Distance - Basic", () => {
+            assertEquals(minDistance("horse", "ros"), 3);
+          });
+
+          Deno.test("Edit Distance - Same", () => {
+            assertEquals(minDistance("abc", "abc"), 0);
+          });
+
+          Deno.test("Edit Distance - Insert All", () => {
+            assertEquals(minDistance("", "abc"), 3);
+          });
+  - metadata:
+      title: "Construct Binary Tree from Preorder and Inorder Traversal"
+      filename: "105-construct-binary-tree-from-preorder-and-inorder-traversal.ipynb"
+    cells:
+      - type: markdown
+        content: |
+          # [Construct Binary Tree from Preorder and Inorder Traversal](https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/)
+          ## Description
+          Build a binary tree from preorder and inorder traversal arrays.
+          ## Strategy
+          Use recursion and map of inorder indexes. Reconstruct root from preorder and partition in inorder.
+      - type: code
+        content: |
+          export class TreeNode {
+            val: number;
+            left: TreeNode | null;
+            right: TreeNode | null;
+            constructor(val?: number, left?: TreeNode | null, right?: TreeNode | null) {
+              this.val = val === undefined ? 0 : val;
+              this.left = left ?? null;
+              this.right = right ?? null;
+            }
+          }
+
+          export function buildTree(preorder: number[], inorder: number[]): TreeNode | null {
+            return null;
+          }
+      - type: code
+        content: |
+          import { assertEquals } from "https://deno.land/std/testing/asserts.ts";
+
+          Deno.test("Build Tree - Basic", () => {
+            const res = buildTree([3,9,20,15,7], [9,3,15,20,7]);
+            assertEquals(res?.val, 3);
+          });
+  - metadata:
+      title: "Find Minimum in Rotated Sorted Array II"
+      filename: "154-find-minimum-in-rotated-sorted-array-ii.ipynb"
+    cells:
+      - type: markdown
+        content: |
+          # [Find Minimum in Rotated Sorted Array II](https://leetcode.com/problems/find-minimum-in-rotated-sorted-array-ii/)
+          ## Description
+          Find the minimum value in a rotated sorted array that may contain duplicates.
+          ## Strategy
+          Use binary search with logic to handle duplicates by shrinking search space conservatively.
+      - type: code
+        content: |
+          export function findMin(nums: number[]): number {
+            return 0;
+          }
+      - type: code
+        content: |
+          import { assertEquals } from "https://deno.land/std/testing/asserts.ts";
+
+          Deno.test("Min Rotated II - With Duplicates", () => {
+            assertEquals(findMin([2,2,2,0,1]), 0);
+          });
+
+          Deno.test("Min Rotated II - Single Element", () => {
+            assertEquals(findMin([1]), 1);
+          });
+
+          Deno.test("Min Rotated II - Sorted", () => {
+            assertEquals(findMin([1,2,3,4]), 1);
+          });
+  - metadata:
+      title: "Search a 2D Matrix II"
+      filename: "240-search-a-2d-matrix-ii.ipynb"
+    cells:
+      - type: markdown
+        content: |
+          # [Search a 2D Matrix II](https://leetcode.com/problems/search-a-2d-matrix-ii/)
+          ## Description
+          Search for a target in a matrix where rows and columns are sorted.
+          ## Strategy
+          Start from top-right or bottom-left and eliminate rows or columns based on comparison.
+      - type: code
+        content: |
+          export function searchMatrix(matrix: number[][], target: number): boolean {
+            return false;
+          }
+      - type: code
+        content: |
+          import { assertEquals } from "https://deno.land/std/testing/asserts.ts";
+
+          Deno.test("2D Search - Found", () => {
+            assertEquals(searchMatrix([
+              [1, 4, 7, 11, 15],
+              [2, 5, 8, 12, 19],
+              [3, 6, 9, 16, 22],
+              [10, 13, 14, 17, 24],
+              [18, 21, 23, 26, 30]
+            ], 5), true);
+          });
+
+          Deno.test("2D Search - Not Found", () => {
+            assertEquals(searchMatrix([
+              [1, 4, 7],
+              [8, 10, 12]
+            ], 6), false);
+          });
+
+          Deno.test("2D Search - Empty Matrix", () => {
+            assertEquals(searchMatrix([], 1), false);
+          });

@@ -1,220 +1,209 @@
 notebooks:
   - metadata:
-      title: Find Minimum in Rotated Sorted Array II
-      filename: "154-find-minimum-in-rotated-sorted-array-ii.ipynb"
-      author: YourName
+      title: "Best Time to Buy and Sell Stock"
+      filename: "121-best-time-to-buy-and-sell-stock.ipynb"
     cells:
       - type: markdown
         content: |
-          # Find Minimum in Rotated Sorted Array II
-          [Find Minimum in Rotated Sorted Array II](https://leetcode.com/problems/find-minimum-in-rotated-sorted-array-ii/)
+          # [Best Time to Buy and Sell Stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock)
+          ## Description  
+          Determine the maximum profit you can achieve from a single buy and a single sell, given a list of stock prices over time.
+          ## Strategy  
+          Use a single-pass approach to track the minimum price so far and update the max profit as you go.
+      - type: code
+        content: |
+          export function maxProfit(prices: number[]): number {
+            return 0;
+          }
+      - type: code
+        content: |
+          import { assertEquals } from "https://deno.land/std/testing/asserts.ts";
+          import { maxProfit } from "./121-best-time-to-buy-and-sell-stock.ts";
 
-          Handle duplicates in modified binary search.
-      - type: code
-        content: |
-          // Implementation here
-      - type: code
-        content: |
-          Deno.test("Find Minimum in Rotated Sorted Array II - Basic", () => {
-            // Separate assertions here
+          Deno.test("maxProfit basic", () => {
+            assertEquals(maxProfit([7,1,5,3,6,4]), 5);
+          });
+
+          Deno.test("maxProfit no profit", () => {
+            assertEquals(maxProfit([7,6,4,3,1]), 0);
+          });
+
+          Deno.test("maxProfit single day", () => {
+            assertEquals(maxProfit([5]), 0);
+          });
+
+          Deno.test("maxProfit empty", () => {
+            assertEquals(maxProfit([]), 0);
           })
-
   - metadata:
-      title: Search a 2D Matrix II
-      filename: "240-search-a-2d-matrix-ii.ipynb"
-      author: YourName
+      title: "Implement Trie (Prefix Tree)"
+      filename: "208-implement-trie-prefix-tree.ipynb"
     cells:
       - type: markdown
         content: |
-          # Search a 2D Matrix II
-          [Search a 2D Matrix II](https://leetcode.com/problems/search-a-2d-matrix-ii/)
-
-          2D matrix search starting from top-right corner.
+          # [Implement Trie (Prefix Tree)](https://leetcode.com/problems/implement-trie-prefix-tree)
+          ## Description  
+          Design a Trie data structure to insert words, search for exact matches, and check prefixes.
+          ## Strategy  
+          Use nested hash maps (objects) or a class-based tree structure to represent nodes with character keys.
       - type: code
         content: |
-          // Implementation here
+          export class Trie {
+            constructor() {}
+
+            insert(word: string): void {}
+
+            search(word: string): boolean {
+              return false;
+            }
+
+            startsWith(prefix: string): boolean {
+              return false;
+            }
+          }
       - type: code
         content: |
-          Deno.test("Search a 2D Matrix II - Basic", () => {
-            // Separate assertions here
-          })
+          import { assertEquals } from "https://deno.land/std/testing/asserts.ts";
 
+          Deno.test("Trie basic operations", () => {
+            const trie = new Trie();
+            trie.insert("apple");
+            assertEquals(trie.search("apple"), true);
+            assertEquals(trie.search("app"), false);
+            assertEquals(trie.startsWith("app"), true);
+            trie.insert("app");
+            assertEquals(trie.search("app"), true);
+          });
   - metadata:
-      title: Median of Two Sorted Arrays
-      filename: "4-median-of-two-sorted-arrays.ipynb"
-      author: YourName
+      title: "Word Search II"
+      filename: "212-word-search-ii.ipynb"
     cells:
       - type: markdown
         content: |
-          # Median of Two Sorted Arrays
-          [Median of Two Sorted Arrays](https://leetcode.com/problems/median-of-two-sorted-arrays/)
-
-          Binary search partition method.
+          # [Word Search II](https://leetcode.com/problems/word-search-ii)
+          ## Description  
+          Given a board and a list of words, find all the words present in the board using DFS with prefix pruning.
+          ## Strategy  
+          Use a Trie for efficient prefix checks and backtrack through the board to find valid words.
       - type: code
         content: |
-          // Implementation here
+          export function findWords(board: string[][], words: string[]): string[] {
+            return [];
+          }
       - type: code
         content: |
-          Deno.test("Median of Two Sorted Arrays - Basic", () => {
-            // Separate assertions here
-          })
+          import { assertEquals } from "https://deno.land/std/testing/asserts.ts";
+          import { findWords } from "./212-word-search-ii.ts";
 
+          Deno.test("findWords basic", () => {
+            const board = [["o","a","a","n"],["e","t","a","e"],["i","h","k","r"],["i","f","l","v"]];
+            const words = ["oath","pea","eat","rain"];
+            assertEquals(findWords(board, words).sort(), ["eat","oath"].sort());
+          });
+
+          Deno.test("findWords edge", () => {
+            assertEquals(findWords([], ["abc"]), []);
+            assertEquals(findWords([["a"]], ["a"]), ["a"]);
+          });
   - metadata:
-      title: Kth Smallest Element in a Sorted Matrix
-      filename: "378-kth-smallest-element-in-a-sorted-matrix.ipynb"
-      author: YourName
-    cells:
-      - type: markdown
-        content: |
-          # Kth Smallest Element in a Sorted Matrix
-          [Kth Smallest Element in a Sorted Matrix](https://leetcode.com/problems/kth-smallest-element-in-a-sorted-matrix/)
-
-          Binary search on value range.
-      - type: code
-        content: |
-          // Implementation here
-      - type: code
-        content: |
-          Deno.test("Kth Smallest Element in a Sorted Matrix - Basic", () => {
-            // Separate assertions here
-          })
-
-  - metadata:
-      title: Split Array Largest Sum
-      filename: "410-split-array-largest-sum.ipynb"
-      author: YourName
-    cells:
-      - type: markdown
-        content: |
-          # Split Array Largest Sum
-          [Split Array Largest Sum](https://leetcode.com/problems/split-array-largest-sum/)
-
-          Binary search on the largest sum threshold.
-      - type: code
-        content: |
-          // Implementation here
-      - type: code
-        content: |
-          Deno.test("Split Array Largest Sum - Basic", () => {
-            // Separate assertions here
-          })
-
-  - metadata:
-      title: Binary Tree Maximum Path Sum
-      filename: "124-binary-tree-maximum-path-sum.ipynb"
-      author: YourName
-    cells:
-      - type: markdown
-        content: |
-          # Binary Tree Maximum Path Sum
-          [Binary Tree Maximum Path Sum](https://leetcode.com/problems/binary-tree-maximum-path-sum/)
-
-          DFS to find max gain and global max path sum.
-      - type: code
-        content: |
-          // Implementation here
-      - type: code
-        content: |
-          Deno.test("Binary Tree Maximum Path Sum - Basic", () => {
-            // Separate assertions here
-          })
-
-  - metadata:
-      title: Count Complete Tree Nodes
-      filename: "222-count-complete-tree-nodes.ipynb"
-      author: YourName
-    cells:
-      - type: markdown
-        content: |
-          # Count Complete Tree Nodes
-          [Count Complete Tree Nodes](https://leetcode.com/problems/count-complete-tree-nodes/)
-
-          Binary depth count for O(log² n) complexity.
-      - type: code
-        content: |
-          // Implementation here
-      - type: code
-        content: |
-          Deno.test("Count Complete Tree Nodes - Basic", () => {
-            // Separate assertions here
-          })
-
-  - metadata:
-      title: Construct Binary Tree from Preorder and Inorder Traversal
-      filename: "105-construct-binary-tree-from-preorder-and-inorder-traversal.ipynb"
-      author: YourName
-    cells:
-      - type: markdown
-        content: |
-          # Construct Binary Tree from Preorder and Inorder Traversal
-          [Construct Binary Tree from Preorder and Inorder Traversal](https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/)
-
-          Recursively divide preorder/inorder arrays.
-      - type: code
-        content: |
-          // Implementation here
-      - type: code
-        content: |
-          Deno.test("Construct Binary Tree - Basic", () => {
-            // Separate assertions here
-          })
-
-  - metadata:
-      title: Serialize and Deserialize Binary Tree
+      title: "Serialize and Deserialize Binary Tree"
       filename: "297-serialize-and-deserialize-binary-tree.ipynb"
-      author: YourName
     cells:
       - type: markdown
         content: |
-          # Serialize and Deserialize Binary Tree
-          [Serialize and Deserialize Binary Tree](https://leetcode.com/problems/serialize-and-deserialize-binary-tree/)
-
-          Preorder traversal with null markers.
+          # [Serialize and Deserialize Binary Tree](https://leetcode.com/problems/serialize-and-deserialize-binary-tree)
+          ## Description  
+          Convert a binary tree to a string and back using a serialization format.
+          ## Strategy  
+          Use preorder traversal with "null" markers for missing nodes to maintain structure.
       - type: code
         content: |
-          // Implementation here
+          import { TreeNode } from "../bin/utils.ts"
+
+          export class Codec {
+            serialize(root: TreeNode | null): string {
+              return "";
+            }
+
+            deserialize(data: string): TreeNode | null {
+              return null;
+            }
+          }
       - type: code
         content: |
-          Deno.test("Serialize/Deserialize - Basic", () => {
-            // Separate assertions here
-          })
+          import { assert } from "https://deno.land/std/testing/asserts.ts";
 
+          Deno.test("serialize and deserialize basic", () => {
+            const codec = new Codec();
+            const tree = new TreeNode(1, new TreeNode(2), new TreeNode(3));
+            const data = codec.serialize(tree);
+            const restored = codec.deserialize(data);
+            assert(codec.serialize(restored) === data);
+          });
   - metadata:
-      title: Binary Tree Cameras
-      filename: "968-binary-tree-cameras.ipynb"
-      author: YourName
+      title: "Alien Dictionary"
+      filename: "269-alien-dictionary.ipynb"
     cells:
       - type: markdown
         content: |
-          # Binary Tree Cameras
-          [Binary Tree Cameras](https://leetcode.com/problems/binary-tree-cameras/)
-
-          Greedy tree DP with camera placement states.
+          # [Alien Dictionary](https://leetcode.com/problems/alien-dictionary)
+          ## Description  
+          Given a sorted list of words from an alien language, derive the order of the alphabet.
+          ## Strategy  
+          Build a graph based on pairwise character precedence and use topological sort.
       - type: code
         content: |
-          // Implementation here
+          export function alienOrder(words: string[]): string {
+            return "";
+          }
       - type: code
         content: |
-          Deno.test("Binary Tree Cameras - Basic", () => {
-            // Separate assertions here
-          })
+          import { assertEquals } from "https://deno.land/std/testing/asserts.ts";
 
+          Deno.test("alienOrder basic", () => {
+            assertEquals(alienOrder(["wrt","wrf","er","ett","rftt"]), "wertf");
+          });
+
+          Deno.test("alienOrder invalid", () => {
+            assertEquals(alienOrder(["z","x","z"]), "");
+          });
   - metadata:
-      title: Recover Binary Search Tree
-      filename: "99-recover-binary-search-tree.ipynb"
-      author: YourName
+      title: "Design Twitter"
+      filename: "355-design-twitter.ipynb"
     cells:
       - type: markdown
         content: |
-          # Recover Binary Search Tree
-          [Recover Binary Search Tree](https://leetcode.com/problems/recover-binary-search-tree/)
+          # [Design Twitter](https://leetcode.com/problems/design-twitter)
+          ## Description  
+          Design a simplified version of Twitter to post tweets, follow users, and retrieve timelines.
+          ## Strategy  
+          Maintain tweet history and follower relationships using maps and priority queues.
+      - type: code
+        content: |
+          export class Twitter {
+            constructor() {}
 
-          Inorder traversal to detect swapped nodes.
+            postTweet(userId: number, tweetId: number): void {}
+
+            getNewsFeed(userId: number): number[] {
+              return [];
+            }
+
+            follow(followerId: number, followeeId: number): void {}
+
+            unfollow(followerId: number, followeeId: number): void {}
+          }
       - type: code
         content: |
-          // Implementation here
-      - type: code
-        content: |
-          Deno.test("Recover BST - Basic", () => {
-            // Separate assertions here
-          })
+          import { assertEquals } from "https://deno.land/std/testing/asserts.ts";
+
+          Deno.test("Twitter basic usage", () => {
+            const twitter = new Twitter();
+            twitter.postTweet(1, 5);
+            assertEquals(twitter.getNewsFeed(1), [5]);
+            twitter.follow(1, 2);
+            twitter.postTweet(2, 6);
+            assertEquals(twitter.getNewsFeed(1), [6, 5]);
+            twitter.unfollow(1, 2);
+            assertEquals(twitter.getNewsFeed(1), [5]);
+          });

@@ -17,6 +17,12 @@ The project has various jupyter notebook folders that correspond to the experien
 
 Also, here's [guide](./resources/patterns-and-techniques.ipynb) for general patterns and techiques for solving problems.
 
+## Generating New Problems
+
+```console
+deno task notebook:yaml
+```
+
 ## Origins of Common Algorithm Techniques
 
 These algorithmic techniques have fascinating origins that span decades of computer science research:

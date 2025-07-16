@@ -1,6 +1,6 @@
 {
   "tasks": {
-    "notebook:json": "deno run --allow-read --allow-write ./bin/make-notebook.ts",
-    "notebook:yaml": "deno run --allow-read --allow-write ./bin/make-notebook.ts"
+    "notebook": "deno run --allow-read --allow-write ./bin/notebooks.ts",
+    "notebook:override": "deno run --allow-read --allow-write ./bin/notebooks.ts --override"
   }
 }
