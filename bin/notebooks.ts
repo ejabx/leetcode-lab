@@ -60,7 +60,7 @@ async function main() {
 
   for (const entry of parsed.notebooks) {
     const { filename, title } = entry.metadata;
-    const qualifiedName = `./problems/${filename}.ipynb`
+    const qualifiedName = `./problems/${filename.split('.ipynb')[0]}.ipynb`
     
     try {
       // Check if file already exists
