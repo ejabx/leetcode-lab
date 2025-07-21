@@ -4,56 +4,56 @@
 
 ### Two Pointers & Arrays (2 hours)
 
-| Problem                                                                         | Difficulty | Key Technique          | Time Allocation |
-| ------------------------------------------------------------------------------- | ---------- | ---------------------- | --------------- |
-| [Two Sum](problems/001-two-sum.ipynb)                                           | Easy       | Hash Map               | 20 min          |
-| [Two Sum II](problems/167-two-sum-ii.ipynb)                                     | Medium     | Two Pointers           | 20 min          |
-| [3Sum](problems/015-3sum.ipynb)                                                 | Medium     | Two Pointers + Sorting | 45 min          |
-| [Container With Most Water](problems/011-container-with-most-water.ipynb)       | Medium     | Two Pointers           | 30 min          |
-| [Product of Array Except Self](problems/238-product-of-array-except-self.ipynb) | Medium     | Array Manipulation     | 25 min          |
+| Problem                                                                            | Difficulty | Key Technique          | Time Allocation |
+| ---------------------------------------------------------------------------------- | ---------- | ---------------------- | --------------- |
+| [Two Sum](../problems/001-two-sum.ipynb)                                           | Easy       | Hash Map               | 20 min          |
+| [Two Sum II](../problems/167-two-sum-ii.ipynb)                                     | Medium     | Two Pointers           | 20 min          |
+| [3Sum](../problems/015-3sum.ipynb)                                                 | Medium     | Two Pointers + Sorting | 45 min          |
+| [Container With Most Water](../problems/011-container-with-most-water.ipynb)       | Medium     | Two Pointers           | 30 min          |
+| [Product of Array Except Self](../problems/238-product-of-array-except-self.ipynb) | Medium     | Array Manipulation     | 25 min          |
 
 ### Sliding Window (1 hour)
 
-| Problem                                                                                | Difficulty | Key Technique  | Time Allocation |
-| -------------------------------------------------------------------------------------- | ---------- | -------------- | --------------- |
-| [Longest Substring Without Repeating Characters](problems/003-longest-substring.ipynb) | Medium     | Sliding Window | 45 min          |
+| Problem                                                                                   | Difficulty | Key Technique  | Time Allocation |
+| ----------------------------------------------------------------------------------------- | ---------- | -------------- | --------------- |
+| [Longest Substring Without Repeating Characters](../problems/003-longest-substring.ipynb) | Medium     | Sliding Window | 45 min          |
 
 ## Afternoon Session (3-4 hours): Graph & Tree Traversal
 
 ### Graph Basics (1.5 hours)
 
-| Problem                                                   | Difficulty | Key Technique | Time Allocation |
-| --------------------------------------------------------- | ---------- | ------------- | --------------- |
-| [Number of Islands](problems/200-number-of-islands.ipynb) | Medium     | DFS/BFS       | 45 min          |
-| [Clone Graph](problems/133-clone-graph.ipynb)             | Medium     | DFS/BFS       | 45 min          |
+| Problem                                                      | Difficulty | Key Technique | Time Allocation |
+| ------------------------------------------------------------ | ---------- | ------------- | --------------- |
+| [Number of Islands](../problems/200-number-of-islands.ipynb) | Medium     | DFS/BFS       | 45 min          |
+| [Clone Graph](../problems/133-clone-graph.ipynb)             | Medium     | DFS/BFS       | 45 min          |
 
 ### Backtracking Essentials (1.5 hours)
 
-| Problem                                                                                           | Difficulty | Key Technique | Time Allocation |
-| ------------------------------------------------------------------------------------------------- | ---------- | ------------- | --------------- |
-| [Letter Combinations of a Phone Number](problems/017-letter-combinations-of-a-phone-number.ipynb) | Medium     | Backtracking  | 45 min          |
-| [Permutations](problems/046-permutations.ipynb)                                                   | Medium     | Backtracking  | 45 min          |
+| Problem                                                                                              | Difficulty | Key Technique | Time Allocation |
+| ---------------------------------------------------------------------------------------------------- | ---------- | ------------- | --------------- |
+| [Letter Combinations of a Phone Number](../problems/017-letter-combinations-of-a-phone-number.ipynb) | Medium     | Backtracking  | 45 min          |
+| [Permutations](../problems/046-permutations.ipynb)                                                   | Medium     | Backtracking  | 45 min          |
 
 ## Evening Session (2-3 hours): Advanced Patterns
 
 ### Dynamic Programming Essentials (1.5 hours)
 
-| Problem                                                                               | Difficulty | Key Technique      | Time Allocation |
-| ------------------------------------------------------------------------------------- | ---------- | ------------------ | --------------- |
-| [Best Time to Buy and Sell Stock](problems/121-best-time-to-buy-and-sell-stock.ipynb) | Easy       | DP - State Machine | 30 min          |
-| [Coin Change](problems/322-coin-change.ipynb)                                         | Medium     | DP - Bottom Up     | 60 min          |
+| Problem                                                                                  | Difficulty | Key Technique      | Time Allocation |
+| ---------------------------------------------------------------------------------------- | ---------- | ------------------ | --------------- |
+| [Best Time to Buy and Sell Stock](../problems/121-best-time-to-buy-and-sell-stock.ipynb) | Easy       | DP - State Machine | 30 min          |
+| [Coin Change](../problems/322-coin-change.ipynb)                                         | Medium     | DP - Bottom Up     | 60 min          |
 
 ### Stack Techniques (1 hour)
 
-| Problem                                                    | Difficulty | Key Technique   | Time Allocation |
-| ---------------------------------------------------------- | ---------- | --------------- | --------------- |
-| [Daily Temperatures](problems/739-daily-temperature.ipynb) | Medium     | Monotonic Stack | 45 min          |
+| Problem                                                       | Difficulty | Key Technique   | Time Allocation |
+| ------------------------------------------------------------- | ---------- | --------------- | --------------- |
+| [Daily Temperatures](../problems/739-daily-temperature.ipynb) | Medium     | Monotonic Stack | 45 min          |
 
 ### Final Challenge (30 min)
 
-| Problem                                               | Difficulty | Key Technique    | Time Allocation |
-| ----------------------------------------------------- | ---------- | ---------------- | --------------- |
-| [Course Schedule](problems/207-course-schedule.ipynb) | Medium     | Topological Sort | 30 min          |
+| Problem                                                  | Difficulty | Key Technique    | Time Allocation |
+| -------------------------------------------------------- | ---------- | ---------------- | --------------- |
+| [Course Schedule](../problems/207-course-schedule.ipynb) | Medium     | Topological Sort | 30 min          |
 
 ## Quick Reference: Pattern Recognition
 
@@ -96,14 +96,14 @@ By end of day, you should recognize and implement:
 
 ### Minimum Viable Coverage (4-5 hours):
 
-| Priority | Problem                                                                                           | Technique      | Time   |
-| -------- | ------------------------------------------------------------------------------------------------- | -------------- | ------ |
-| **P1**   | [Two Sum](problems/001-two-sum.ipynb)                                                             | Hash Map       | 20 min |
-| **P1**   | [Container With Most Water](problems/011-container-with-most-water.ipynb)                         | Two Pointers   | 30 min |
-| **P1**   | [Longest Substring Without Repeating Characters](problems/003-longest-substring.ipynb)            | Sliding Window | 45 min |
-| **P1**   | [Number of Islands](problems/200-number-of-islands.ipynb)                                         | DFS            | 45 min |
-| **P2**   | [Best Time to Buy and Sell Stock](problems/121-best-time-to-buy-and-sell-stock.ipynb)             | DP             | 30 min |
-| **P2**   | [Letter Combinations of a Phone Number](problems/017-letter-combinations-of-a-phone-number.ipynb) | Backtracking   | 45 min |
+| Priority | Problem                                                                                              | Technique      | Time   |
+| -------- | ---------------------------------------------------------------------------------------------------- | -------------- | ------ |
+| **P1**   | [Two Sum](../problems/001-two-sum.ipynb)                                                             | Hash Map       | 20 min |
+| **P1**   | [Container With Most Water](../problems/011-container-with-most-water.ipynb)                         | Two Pointers   | 30 min |
+| **P1**   | [Longest Substring Without Repeating Characters](../problems/003-longest-substring.ipynb)            | Sliding Window | 45 min |
+| **P1**   | [Number of Islands](../problems/200-number-of-islands.ipynb)                                         | DFS            | 45 min |
+| **P2**   | [Best Time to Buy and Sell Stock](../problems/121-best-time-to-buy-and-sell-stock.ipynb)             | DP             | 30 min |
+| **P2**   | [Letter Combinations of a Phone Number](../problems/017-letter-combinations-of-a-phone-number.ipynb) | Backtracking   | 45 min |
 
 ## Interview Readiness Score
 
