@@ -18,13 +18,13 @@ Put notebook info in `bin\notebook.yaml` file.
 deno task notebook (or notebook:override)
 ```
 
-# Cheatsheet
+# Cheatsheets
 
-If you only have [one day](./coursework/1day-cheatsheet.md) to study.
+- If you only have [one day](./coursework/1day-cheatsheet.md) to study.
 
-# Complete Study List
+- If you have some time (2-3 weeks) you have to maximize your ROI with the [full cheatsheet](./coursework/full-cheatsheet.md).
 
-If you have some time (2-3 weeks) you have to maximize your ROI with the [full cheatsheet](./coursework/full-cheatsheet.md).
+- [Common algorithm templates](./coursework/algo-template-cheetsheet.md). Everything from DFS to Postfix and Suffix Products.
 
 # Trivia
 
