@@ -493,7 +493,7 @@ notebooks:
 
   - metadata:
       title: "Longest Valid Parentheses"
-      filename: "32-longest-valid-parentheses.ipynb"
+      filename: "032-longest-valid-parentheses.ipynb"
     cells:
       - type: markdown
         content: |
@@ -873,4 +873,231 @@ notebooks:
 
           Deno.test("maxAreaOfIsland - diagonal only", () => {
             assertEquals(maxAreaOfIsland([[1,0],[0,1]]), 1);
+          });
+  - metadata:
+      title: "[Subsets](https://leetcode.com/problems/subsets/)"
+      filename: "078-subsets.ipynb"
+    cells:
+      - type: markdown
+        content: |
+          # [Subsets](https://leetcode.com/problems/subsets/)
+
+          Generate all subsets using backtracking.
+
+          ## Strategy  
+          Use recursion to build subsets by including or excluding each element.
+
+      - type: code
+        content: |
+          export function subsets(nums: number[]): number[][] {
+            return [];
+          }
+
+      - type: code
+        content: |
+          import { assertEquals } from "https://deno.land/std/testing/asserts.ts";
+
+          Deno.test("subsets - basic", () => {
+            assertEquals(subsets([1,2,3]).length, 8);
+          });
+
+  - metadata:
+      title: "[Permutations](https://leetcode.com/problems/permutations/)"
+      filename: "046-permutations.ipynb"
+    cells:
+      - type: markdown
+        content: |
+          # [Permutations](https://leetcode.com/problems/permutations/)
+
+          Return all permutations of a list of numbers.
+
+          ## Strategy  
+          Backtrack by swapping elements in-place to explore all permutations.
+
+      - type: code
+        content: |
+          export function permute(nums: number[]): number[][] {
+            return [];
+          }
+
+      - type: code
+        content: |
+          import { assertEquals } from "https://deno.land/std/testing/asserts.ts";
+
+          Deno.test("permute - basic", () => {
+            assertEquals(permute([1,2,3]).length, 6);
+          });
+
+  - metadata:
+      title: "[Combinations](https://leetcode.com/problems/combinations/)"
+      filename: "077-combinations.ipynb"
+    cells:
+      - type: markdown
+        content: |
+          # [Combinations](https://leetcode.com/problems/combinations/)
+
+          Return all combinations of k numbers out of 1...n.
+
+          ## Strategy  
+          Use backtracking to build valid k-sized combinations.
+
+      - type: code
+        content: |
+          export function combine(n: number, k: number): number[][] {
+            return [];
+          }
+
+      - type: code
+        content: |
+          import { assertEquals } from "https://deno.land/std/testing/asserts.ts";
+
+          Deno.test("combine - basic", () => {
+            assertEquals(combine(4, 2).length, 6);
+          });
+
+  - metadata:
+      title: "[Letter Combinations of a Phone Number](https://leetcode.com/problems/letter-combinations-of-a-phone-number/)"
+      filename: "017-letter-combinations-of-a-phone-number.ipynb"
+    cells:
+      - type: markdown
+        content: |
+          # [Letter Combinations of a Phone Number](https://leetcode.com/problems/letter-combinations-of-a-phone-number/)
+
+          Return all letter combinations the number could represent.
+
+          ## Strategy  
+          Map digits to characters and backtrack to build combinations.
+
+      - type: code
+        content: |
+          export function letterCombinations(digits: string): string[] {
+            return [];
+          }
+
+      - type: code
+        content: |
+          import { assertEquals } from "https://deno.land/std/testing/asserts.ts";
+
+          Deno.test("letterCombinations - basic", () => {
+            assertEquals(letterCombinations("23").length > 0, true);
+          });
+
+  - metadata:
+      title: "[N-Queens](https://leetcode.com/problems/n-queens/)"
+      filename: "051-n-queens.ipynb"
+    cells:
+      - type: markdown
+        content: |
+          # [N-Queens](https://leetcode.com/problems/n-queens/)
+
+          Place n queens on an n×n board so that no two queens attack each other.
+
+          ## Strategy  
+          Use backtracking with column and diagonal tracking.
+
+      - type: code
+        content: |
+          export function solveNQueens(n: number): string[][] {
+            return [];
+          }
+
+      - type: code
+        content: |
+          import { assertEquals } from "https://deno.land/std/testing/asserts.ts";
+
+          Deno.test("solveNQueens - n=4", () => {
+            assertEquals(solveNQueens(4).length, 2);
+          });
+
+  - metadata:
+      title: "[Sudoku Solver](https://leetcode.com/problems/sudoku-solver/)"
+      filename: "037-sudoku-solver.ipynb"
+    cells:
+      - type: markdown
+        content: |
+          # [Sudoku Solver](https://leetcode.com/problems/sudoku-solver/)
+
+          Solve a Sudoku puzzle by filling empty cells.
+
+          ## Strategy  
+          Use backtracking to try valid digits and backtrack on conflicts.
+
+      - type: code
+        content: |
+          export function solveSudoku(board: string[][]): void {
+            return;
+          }
+
+      - type: code
+        content: |
+          import { assertEquals } from "https://deno.land/std/testing/asserts.ts";
+
+          Deno.test("solveSudoku - does not throw", () => {
+            const board = [
+              ["5","3",".",".","7",".",".",".","."],
+              ["6",".",".","1","9","5",".",".","."],
+              [".","9","8",".",".",".",".","6","."],
+              ["8",".",".",".","6",".",".",".","3"],
+              ["4",".",".","8",".","3",".",".","1"],
+              ["7",".",".",".","2",".",".",".","6"],
+              [".","6",".",".",".",".","2","8","."],
+              [".",".",".","4","1","9",".",".","5"],
+              [".",".",".",".","8",".",".","7","9"]
+            ];
+            solveSudoku(board);
+            assertEquals(board[0][0], "5");
+          });
+
+  - metadata:
+      title: "[Expression Add Operators](https://leetcode.com/problems/expression-add-operators/)"
+      filename: "282-expression-add-operators.ipynb"
+    cells:
+      - type: markdown
+        content: |
+          # [Expression Add Operators](https://leetcode.com/problems/expression-add-operators/)
+
+          Add operators between digits to reach a target value.
+
+          ## Strategy  
+          Use backtracking with expression state tracking.
+
+      - type: code
+        content: |
+          export function addOperators(num: string, target: number): string[] {
+            return [];
+          }
+
+      - type: code
+        content: |
+          import { assertEquals } from "https://deno.land/std/testing/asserts.ts";
+
+          Deno.test("addOperators - simple", () => {
+            assertEquals(addOperators("123", 6).includes("1+2+3"), true);
+          });
+
+  - metadata:
+      title: "[Remove Invalid Parentheses](https://leetcode.com/problems/remove-invalid-parentheses/)"
+      filename: "301-remove-invalid-parentheses.ipynb"
+    cells:
+      - type: markdown
+        content: |
+          # [Remove Invalid Parentheses](https://leetcode.com/problems/remove-invalid-parentheses/)
+
+          Remove minimum invalid parentheses to make valid expressions.
+
+          ## Strategy  
+          Use BFS or backtracking with pruning.
+
+      - type: code
+        content: |
+          export function removeInvalidParentheses(s: string): string[] {
+            return [];
+          }
+
+      - type: code
+        content: |
+          import { assertEquals } from "https://deno.land/std/testing/asserts.ts";
+
+          Deno.test("removeInvalidParentheses - extra right", () => {
+            assertEquals(removeInvalidParentheses("()())()").includes("(())()"), true);
           });
