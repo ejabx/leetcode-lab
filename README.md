@@ -4,6 +4,10 @@ Coursework designed to help all experience levels solve leetcode problems. They 
 
 - `\coursework` has various guides that correspond to the experience levels of the engineer and increase in difficultly
 
+  - [Junior](./coursework/guide-junior.md)
+  - [Senior](./coursework/guide-senior.md)
+  - [Elite](./coursework/guide-elite.md)
+
 - `\resources` has general guides for algorithms and data structures.
 
 ## Generating New Problems
@@ -16,8 +20,12 @@ deno task notebook (or notebook:override)
 
 # Cheatsheet
 
-If you only have [one day](./Cheat.md) to study.
+If you only have [one day](./coursework/1day-cheatsheet.md) to study.
 
 # Complete Study List
 
-If you have plenty time (2-3 weeks) you have to maximize your [ROI](./Complete.md).
+If you have some time (2-3 weeks) you have to maximize your ROI with the [full cheatsheet](./coursework/full-cheatsheet.md).
+
+# Trivia
+
+If you [interested](./coursework/trivia.md) on how these algorithms and data structures developed.

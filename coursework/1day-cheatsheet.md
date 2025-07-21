@@ -7,8 +7,9 @@
 | Problem                                                                         | Difficulty | Key Technique          | Time Allocation |
 | ------------------------------------------------------------------------------- | ---------- | ---------------------- | --------------- |
 | [Two Sum](problems/001-two-sum.ipynb)                                           | Easy       | Hash Map               | 20 min          |
-| [Container With Most Water](problems/011-container-with-most-water.ipynb)       | Medium     | Two Pointers           | 30 min          |
+| [Two Sum II](problems/167-two-sum-ii.ipynb)                                     | Medium     | Two Pointers           | 20 min          |
 | [3Sum](problems/015-3sum.ipynb)                                                 | Medium     | Two Pointers + Sorting | 45 min          |
+| [Container With Most Water](problems/011-container-with-most-water.ipynb)       | Medium     | Two Pointers           | 30 min          |
 | [Product of Array Except Self](problems/238-product-of-array-except-self.ipynb) | Medium     | Array Manipulation     | 25 min          |
 
 ### Sliding Window (1 hour)
