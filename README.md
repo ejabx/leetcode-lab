@@ -2,109 +2,129 @@
 
 Coursework designed to help all experience levels solve leetcode problems. They are all based on 3-week coursework with 6 hour days of studying. It's intense, but _you can do it_!
 
-The project has various jupyter notebook folders that correspond to the experience levels of the engineer and increase in difficultly:
+- `\coursework` has various guides that correspond to the experience levels of the engineer and increase in difficultly
 
-- [Foundational](./coursework/foundational.md)
-
-  > This 3-week guide provides a realistic path to strong medium problem proficiency and introductory hard problem capability. The key is consistent daily practice with deep focus on pattern mastery rather than problem volume.
-
-- [Senior](./coursework/senior.md)
-
-  > This intensive 3-week program is designed for senior engineers who want to rapidly master algorithmic problem-solving.
-
-- [Elite](./coursework/elite.md)
-  > With this elite preparation level, you'll be ready for the most challenging technical interviews at any company, including quantitative trading firms, advanced AI research positions, and senior+ roles at top tech companies. Your preparation will rival computer science PhD candidates and competitive programming experts.
-
-Also, here's [guide](./resources/patterns-and-techniques.ipynb) for general patterns and techiques for solving problems.
+- `\resources` has general guides for algorithms and data structures.
 
 ## Generating New Problems
 
+Put notebook info in `bin\notebook.yaml` file.
+
 ```console
-deno task notebook:yaml
+deno task notebook (or notebook:override)
 ```
 
-## Cheatsheet (1-2 days Study Plan)
+# Cheatsheet (1-Day Intensive Study Plan)
 
-### Day 1: Core Fundamentals (8-10 hours)
+## Morning Session (3-4 hours): Core Fundamentals
 
-#### Morning Session (3-4 hours): Array & Two Pointers
+### Two Pointers & Arrays (2 hours)
 
-**Must-do problems:**
+| Problem                                                                         | Difficulty | Key Technique          | Time Allocation |
+| ------------------------------------------------------------------------------- | ---------- | ---------------------- | --------------- |
+| [Two Sum](problems/001-two-sum.ipynb)                                           | Easy       | Hash Map               | 20 min          |
+| [Container With Most Water](problems/011-container-with-most-water.ipynb)       | Medium     | Two Pointers           | 30 min          |
+| [3Sum](problems/015-3sum.ipynb)                                                 | Medium     | Two Pointers + Sorting | 45 min          |
+| [Product of Array Except Self](problems/238-product-of-array-except-self.ipynb) | Medium     | Array Manipulation     | 25 min          |
 
-1. **[Two Sum](problems/001-two-sum.ipynb)** - The classic starter problem
-2. **[Container With Most Water](problems/011-container-with-most-water.ipynb)** - Core two-pointer technique
-3. **[3Sum](problems/015-3sum.ipynb)** - Essential for understanding pointer manipulation
-4. **[Product of Array Except Self](problems/238-product-of-array-except-self.ipynb)** - Common array manipulation pattern
+### Sliding Window (1 hour)
 
-**Why these?** Two pointers is the highest ROI technique - easy to learn, appears frequently in interviews.
+| Problem                                                                                | Difficulty | Key Technique  | Time Allocation |
+| -------------------------------------------------------------------------------------- | ---------- | -------------- | --------------- |
+| [Longest Substring Without Repeating Characters](problems/003-longest-substring.ipynb) | Medium     | Sliding Window | 45 min          |
 
-#### Afternoon Session (3-4 hours): Sliding Window & String Processing
+## Afternoon Session (3-4 hours): Graph & Tree Traversal
 
-**Must-do problems:** 5. **[Longest Substring Without Repeating Characters](problems/003-longest-substring.ipynb)** - Classic sliding window 6. **[Minimum Window Substring](problems/076-minimum-window-substring.ipynb)** - Advanced sliding window (if time permits)
+### Graph Basics (1.5 hours)
 
-#### Evening Session (2 hours): Graph Basics
+| Problem                                                   | Difficulty | Key Technique | Time Allocation |
+| --------------------------------------------------------- | ---------- | ------------- | --------------- |
+| [Number of Islands](problems/200-number-of-islands.ipynb) | Medium     | DFS/BFS       | 45 min          |
+| [Clone Graph](problems/133-clone-graph.ipynb)             | Medium     | DFS/BFS       | 45 min          |
 
-**Must-do problems:** 7. **[Number of Islands](problems/200-number-of-islands.ipynb)** - Can be solved with both BFS and DFS 8. **[Clone Graph](problems/133-clone-graph.ipynb)** - Graph traversal fundamentals
+### Backtracking Essentials (1.5 hours)
 
-### Day 2: Advanced Patterns (8-10 hours)
+| Problem                                                                                           | Difficulty | Key Technique | Time Allocation |
+| ------------------------------------------------------------------------------------------------- | ---------- | ------------- | --------------- |
+| [Letter Combinations of a Phone Number](problems/017-letter-combinations-of-a-phone-number.ipynb) | Medium     | Backtracking  | 45 min          |
+| [Permutations](problems/046-permutations.ipynb)                                                   | Medium     | Backtracking  | 45 min          |
 
-#### Morning Session (3-4 hours): Backtracking
+## Evening Session (2-3 hours): Advanced Patterns
 
-**Must-do problems:** 9. **[Letter Combinations of a Phone Number](problems/017-letter-combinations-of-a-phone-number.ipynb)** - Backtracking introduction 10. **[Permutations](problems/046-permutations.ipynb)** - Classic backtracking pattern 11. **[Combination Sum](problems/039-combination-sum.ipynb)** - Decision tree backtracking
+### Dynamic Programming Essentials (1.5 hours)
 
-#### Afternoon Session (3-4 hours): Stack & Advanced Techniques
+| Problem                                                                               | Difficulty | Key Technique      | Time Allocation |
+| ------------------------------------------------------------------------------------- | ---------- | ------------------ | --------------- |
+| [Best Time to Buy and Sell Stock](problems/121-best-time-to-buy-and-sell-stock.ipynb) | Easy       | DP - State Machine | 30 min          |
+| [Coin Change](problems/322-coin-change.ipynb)                                         | Medium     | DP - Bottom Up     | 60 min          |
 
-**Must-do problems:** 12. **[Daily Temperatures](problems/739-daily-temperature.ipynb)** - Monotonic stack pattern 13. **[Largest Rectangle in Histogram](problems/084-largest-rectangle-in-histogram.ipynb)** - Advanced stack usage
+### Stack Techniques (1 hour)
 
-#### Evening Session (2 hours): Graph Algorithms
+| Problem                                                    | Difficulty | Key Technique   | Time Allocation |
+| ---------------------------------------------------------- | ---------- | --------------- | --------------- |
+| [Daily Temperatures](problems/739-daily-temperature.ipynb) | Medium     | Monotonic Stack | 45 min          |
 
-**Must-do problems:** 14. **[Course Schedule](problems/207-course-schedule.ipynb)** - Topological sort/cycle detection 15. **[Word Ladder](problems/127-word-ladder.ipynb)** - BFS application
+### Final Challenge (30 min)
 
-### Bonus Problems (If you have extra time)
+| Problem                                               | Difficulty | Key Technique    | Time Allocation |
+| ----------------------------------------------------- | ---------- | ---------------- | --------------- |
+| [Course Schedule](problems/207-course-schedule.ipynb) | Medium     | Topological Sort | 30 min          |
 
-16. **[Trapping Rain Water](problems/042-trapping-rain-water.ipynb)** - Multiple solution approaches
-17. **[N-Queens](problems/051-n-queens.ipynb)** - Complex backtracking
-18. **[Reverse Linked List](problems/206-reverse-linked-list.ipynb)** - Linked list fundamental
+## Quick Reference: Pattern Recognition
 
-### Study Strategy
+| Pattern                 | When to Use                                    | Example Problems                         |
+| ----------------------- | ---------------------------------------------- | ---------------------------------------- |
+| **Two Pointers**        | Sorted arrays, finding pairs/triplets          | Two Sum, 3Sum, Container With Most Water |
+| **Sliding Window**      | Substring/subarray problems                    | Longest Substring Without Repeating      |
+| **DFS/BFS**             | Graph/tree traversal, connected components     | Number of Islands, Clone Graph           |
+| **Backtracking**        | Generate all combinations/permutations         | Letter Combinations, Permutations        |
+| **Dynamic Programming** | Optimization problems, overlapping subproblems | Best Time to Buy/Sell Stock, Coin Change |
+| **Monotonic Stack**     | Next greater/smaller element problems          | Daily Temperatures, Trapping Rain Water  |
 
-#### Time Allocation per Problem:
+## Study Strategy for 1-Day Sprint
 
-- **Easy problems**: 20-30 minutes
-- **Medium problems**: 45-60 minutes
-- **Hard problems**: 60-90 minutes
+### Time Management:
 
-#### Approach:
+- **Strict time limits**: Don't exceed allocated time per problem
+- **15-minute rule**: If stuck for 15+ minutes, look at solution
+- **Focus on patterns**: Understanding > memorization
+- **Quick review**: 5 minutes between problems to solidify concept
 
-1. **Attempt solo first** (15-20 min max)
-2. **Review solution** if stuck
-3. **Code it yourself** after understanding
-4. **Review edge cases**
-5. **Note the pattern/technique**
+### Priority Order:
 
-#### Key Patterns to Master:
+1. **Must complete**: Problems 1-7 (core patterns)
+2. **High priority**: Problems 8-9 (advanced but common)
+3. **If time allows**: Problem 10 (complex but valuable)
 
-- **Two Pointers**: Left/right pointer movement
-- **Sliding Window**: Expand/contract window technique
-- **DFS/BFS**: Recursive vs iterative traversal
-- **Backtracking**: Build solution incrementally with pruning
-- **Monotonic Stack**: Maintain stack property for next greater/smaller
+### Success Metrics for 1 Day:
 
-### Success Metrics
+By end of day, you should recognize and implement:
 
-By the end of 2 days, you should be able to:
+- Two pointers technique
+- Basic sliding window
+- DFS traversal on graphs
+- Simple backtracking structure
+- Basic dynamic programming (1D DP)
+- Monotonic stack concept
 
-- Identify when to use two pointers vs sliding window
-- Implement basic DFS and BFS from scratch
-- Recognize backtracking problems and solution structure
-- Use stack for monotonic sequences
-- Solve similar problems in each category independently
+## Backup Plan (If Running Behind)
 
-### Interview Readiness Score
+### Minimum Viable Coverage (4-5 hours):
 
-Completing these 15-18 problems gives you **~70% coverage** of common interview patterns. Focus on understanding the underlying techniques rather than memorizing solutions.
+| Priority | Problem                                                                                           | Technique      | Time   |
+| -------- | ------------------------------------------------------------------------------------------------- | -------------- | ------ |
+| **P1**   | [Two Sum](problems/001-two-sum.ipynb)                                                             | Hash Map       | 20 min |
+| **P1**   | [Container With Most Water](problems/011-container-with-most-water.ipynb)                         | Two Pointers   | 30 min |
+| **P1**   | [Longest Substring Without Repeating Characters](problems/003-longest-substring.ipynb)            | Sliding Window | 45 min |
+| **P1**   | [Number of Islands](problems/200-number-of-islands.ipynb)                                         | DFS            | 45 min |
+| **P2**   | [Best Time to Buy and Sell Stock](problems/121-best-time-to-buy-and-sell-stock.ipynb)             | DP             | 30 min |
+| **P2**   | [Letter Combinations of a Phone Number](problems/017-letter-combinations-of-a-phone-number.ipynb) | Backtracking   | 45 min |
 
-## Complete Study List
+## Interview Readiness Score
+
+Completing the full 1-day plan gives you **~65% coverage** of common interview patterns with **13 essential problems**. The backup plan still provides **~50%** coverage with **6 core problems**.
+
+# Complete Study List
 
 ## High Return on Investment (Easy to Learn, High Interview Frequency)
 
@@ -142,66 +162,3 @@ Completing these 15-18 problems gives you **~70% coverage** of common interview 
 | **Linked Lists**       | [Reverse Nodes in k-Group](problems/025-reverse-nodes-in-k-group.ipynb), [Copy List with Random Pointer](problems/138-copy-list-with-random-pointer.ipynb), [Reverse Linked List](problems/206-reverse-linked-list.ipynb)( |
 | **Design**             | [LRU Cache](problems/146-lru-cache.ipynb), [Design Twitter](problems/355-design-twitter.ipynb)                                                                                                                             |
 | **Tree Serialization** | [Serialize and Deserialize Binary Tree](problems/297-serialize-and-deserialize-binary-tree.ipynb)                                                                                                                          |
-
----
-
-## Origins of Common Algorithm Techniques
-
-These algorithmic techniques have fascinating origins that span decades of computer science research:
-
-### **Two Pointers**
-
-> Used for reducing O(n²) or O(n³) solutions by intelligently moving pointers based on conditions
-
-The two pointers technique doesn't have a single "inventor" but emerged from fundamental algorithmic thinking in the 1960s-70s. It's rooted in basic array traversal optimizations that were developed as programmers sought to reduce nested loops. The technique became formalized through:
-
-- Early sorting algorithms (like the partitioning step in QuickSort)
-- Academic algorithms courses teaching optimization strategies
-- Competitive programming communities that codified these patterns
-
-### **Sliding Window**
-
-> Maintains a window of elements and expands/contracts based on validity conditions
-
-The sliding window technique originated from early signal processing and data transmission and has dual origins:
-
-**Signal Processing (1940s-50s)**: Originally used in electrical engineering for analyzing continuous signals by examining fixed-size "windows" of data
-
-**Computer Networks (1970s)**: Used in computer networks where the sender maintains a window size to control the number of unacknowledged frames it can transmit - this was crucial for TCP protocol development
-
-**Algorithmic Applications**: Later adapted for array/string problems as computer scientists recognized the pattern's broader applicability
-
-### [**Monotonic Stack/Deque**](./resources/montonic-stack.ipynb)
-
-> Maintains elements in sorted order to efficiently find next greater/smaller elements or optimize lookups
-
-These emerged from:
-
-- **Stack-based parsing** (1950s-60s): Developed for compiler design and expression evaluation
-  > Uses LIFO structure to track pending elements and resolve them when conditions are met
-- **Deque optimization** (1970s): Academic research on efficient data structures, particularly at universities studying amortized analysis
-- **Competitive programming** (1990s-2000s): Communities like ACM ICPC formalized these patterns for contest problems
-
-### [**Greedy Algorithms**](./resources/greedy-algorithm.ipynb)
-
-> Makes locally optimal choices that lead to globally optimal solutions
-
-Founded in formal computer science theory:
-
-- **1950s-60s**: Developed by researchers like Dijkstra, Kruskal, and Prim for graph algorithms
-- **Academic formalization**: Universities like MIT, Stanford, and CMU developed the theoretical framework
-- **Optimization theory**: Rooted in operations research and mathematical optimization
-
-### **Prefix/Suffix Processing**
-
-> Precomputes values from left-to-right and right-to-left to avoid redundant calculations
-
-This technique emerged from:
-
-- [**Dynamic programming research**](./resources/dynamic-programming.ipynb) (1950s-60s): Richard Bellman's work on optimal decision sequences
-- **Parallel computing** (1960s-70s): Need for efficient preprocessing in parallel algorithms
-- **Database systems** (1970s-80s): Query optimization requiring precomputed aggregations
-
-### **Evolution and Spread**
-
-Most of these techniques were refined and popularized through **academic computer science programs** at major universities, then spread through **competitive programming** communities and eventually became standard in technical interviews. The patterns you see in LeetCode problems represent decades of algorithmic evolution distilled into teachable, recognizable forms.
