@@ -20,9 +20,9 @@ deno task notebook (or notebook:override)
 
 # Cheatsheets
 
-- If you only have [1-2 days](./coursework/2day-cheatsheet.md) to study.
+- If you only have [2 days](./coursework/2day-cheatsheet.md) to study.
 
-- If you have [2-3 weeks](./coursework/full-cheatsheet.md) you can to maximize your ROI.
+- If you have [6-8 weeks](./coursework/full-cheatsheet.md) you can to maximize your ROI.
 
 - [Common algorithm and data structure templates](./coursework/algo-template-cheetsheet.md) for problems.
 
