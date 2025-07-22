@@ -20,11 +20,11 @@ deno task notebook (or notebook:override)
 
 # Cheatsheets
 
-- If you only have [one day](./coursework/2day-cheatsheet.md) to study.
+- If you only have [1-2 days](./coursework/2day-cheatsheet.md) to study.
 
-- If you have some time (2-3 weeks) you have to maximize your ROI with the [full cheatsheet](./coursework/full-cheatsheet.md).
+- If you have [2-3 weeks](./coursework/full-cheatsheet.md) you can to maximize your ROI.
 
-- [Common algorithm templates](./coursework/algo-template-cheetsheet.md). Everything from DFS to Postfix and Suffix Products.
+- [Common algorithm and data structure templates](./coursework/algo-template-cheetsheet.md) for problems.
 
 # Trivia
 
