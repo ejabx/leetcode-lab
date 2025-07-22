@@ -77,11 +77,11 @@
 
 ### Key Patterns to Master:
 
-- **Two Pointers**: Left/right pointer movement
-- **Sliding Window**: Expand/contract window technique
-- **DFS/BFS**: Recursive vs iterative traversal
-- **Backtracking**: Build solution incrementally with pruning
-- **Monotonic Stack**: Maintain stack property for next greater/smaller
+- [**Two Pointers**](../resources/two-pointer.ipynb): Left/right pointer movement
+- [**Sliding Window**](../resources/sliding-window.ipynb): Expand/contract window technique
+- [**DFS/BFS**](../resources/graphs.ipynb): Recursive vs iterative traversal
+- [**Backtracking**](../resources/backtracking.ipynb): Build solution incrementally with pruning
+- [**Monotonic Stack**](../resources/montonic-stack.ipynb): Maintain stack property for next greater/smaller
 
 ## Success Metrics
 
