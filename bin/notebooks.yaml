@@ -1101,3 +1101,100 @@ notebooks:
           Deno.test("removeInvalidParentheses - extra right", () => {
             assertEquals(removeInvalidParentheses("()())()").includes("(())()"), true);
           });
+  - metadata:
+      title: "[House Robber](https://leetcode.com/problems/house-robber/)"
+      filename: "198-house-robber.ipynb"
+    cells:
+      - type: markdown
+        content: |
+          # [House Robber](https://leetcode.com/problems/house-robber/)
+
+          Maximize the amount of money you can rob tonight without alerting the police, assuming adjacent houses cannot be robbed together.
+
+          ## Strategy  
+          Use dynamic programming to track the maximum at each house: either rob it (and skip previous) or skip it and take the best up to the previous house.
+
+      - type: code
+        content: |
+          export function rob(nums: number[]): number {
+            return 0;
+          }
+
+      - type: code
+        content: |
+          import { assertEquals } from "https://deno.land/std/testing/asserts.ts";
+
+          Deno.test("rob - basic", () => {
+            assertEquals(rob([1, 2, 3, 1]), 4);
+          });
+
+          Deno.test("rob - larger values", () => {
+            assertEquals(rob([2, 7, 9, 3, 1]), 12);
+          });
+
+          Deno.test("rob - single house", () => {
+            assertEquals(rob([5]), 5);
+          });
+
+          Deno.test("rob - two houses", () => {
+            assertEquals(rob([2, 1]), 2);
+          });
+
+          Deno.test("rob - empty list", () => {
+            assertEquals(rob([]), 0);
+          });
+
+  - metadata:
+      title: "[House Robber II](https://leetcode.com/problems/house-robber-ii/)"
+      filename: "213-house-robber-ii.ipynb"
+    cells:
+      - type: markdown
+        content: |
+          # [House Robber II](https://leetcode.com/problems/house-robber-ii/)
+
+          Same as House Robber I, but the houses are arranged in a circle—so the first and last houses cannot both be robbed.
+
+          ## Strategy  
+          The circular constraint splits the problem into two cases:
+          1. Rob from house 0 to n-2 (exclude last)
+          2. Rob from house 1 to n-1 (exclude first)
+
+          Use the same dynamic programming approach from House Robber I on both ranges and return the maximum.
+
+      - type: code
+        content: |
+          export function rob(nums: number[]): number {
+            return 0;
+          }
+
+      - type: code
+        content: |
+          import { assertEquals } from "https://deno.land/std/testing/asserts.ts";
+
+          Deno.test("rob - basic", () => {
+            assertEquals(rob([2, 3, 2]), 3);
+          });
+
+          Deno.test("rob - middle heavier", () => {
+            assertEquals(rob([1, 2, 3, 1]), 4);
+          });
+
+          Deno.test("rob - single house", () => {
+            assertEquals(rob([5]), 5);
+          });
+
+          Deno.test("rob - two houses", () => {
+            assertEquals(rob([2, 1]), 2);
+          });
+
+          Deno.test("rob - empty", () => {
+            assertEquals(rob([]), 0);
+          });
+
+          Deno.test("rob - all same", () => {
+            assertEquals(rob([1, 1, 1, 1]), 2);
+          });
+
+          Deno.test("rob - only first and last high", () => {
+            assertEquals(rob([10, 1, 1, 10]), 11);
+          });
