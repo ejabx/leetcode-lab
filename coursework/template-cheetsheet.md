@@ -10,7 +10,8 @@
 2. [Sliding Window](#sliding-window)
 
    - [Fixed Size Window](#fixed-size-window)
-   - [Variable Size Window](#variable-size-window)
+   - [Variable Size Window (Simple)](#variable-size-window-simple)
+   - [Variable Size Window (with HashMap)](#variable-size-window-with-hashmap)
 
 3. [Depth-First Search (DFS)](#depth-first-search-dfs)
 
@@ -135,20 +136,51 @@ function slidingWindowFixed(arr: number[], k: number): number {
 }
 ```
 
-### Variable Size Window
+### Variable Size Window (Simple)
 
 ```typescript
-function slidingWindowVariable(s: string): number {
+// For problems with simple conditions (sum, binary criteria, etc.)
+function slidingWindowVariableSimple(arr: number[], target: number): number {
+  let left = 0;
+  let windowSum = 0;
+  let result = 0; // or Infinity for minimum length problems
+
+  for (let right = 0; right < arr.length; right++) {
+    // Expand window
+    windowSum += arr[right];
+
+    // Contract window while condition is met/violated
+    while (windowSum >= target) {
+      // Adjust condition as needed
+      // Update result before shrinking
+      result = Math.max(result, right - left + 1);
+
+      // Shrink from left
+      windowSum -= arr[left];
+      left++;
+    }
+  }
+
+  return result;
+}
+```
+
+### Variable Size Window (with HashMap)
+
+```typescript
+// For problems with character frequency, distinct elements, anagrams, etc.
+function slidingWindowVariableHashMap(s: string, k: number): number {
   let left = 0;
   let result = 0;
   const windowState = new Map<string, number>();
 
   for (let right = 0; right < s.length; right++) {
     // Expand window
-    windowState.set(s[right], (windowState.get(s[right]) || 0) + 1);
+    const rightChar = s[right];
+    windowState.set(rightChar, (windowState.get(rightChar) || 0) + 1);
 
     // Contract window while condition is violated
-    while (windowViolatesCondition(windowState)) {
+    while (windowViolatesCondition(windowState, k)) {
       const leftChar = s[left];
       windowState.set(leftChar, windowState.get(leftChar)! - 1);
       if (windowState.get(leftChar) === 0) {
@@ -157,16 +189,47 @@ function slidingWindowVariable(s: string): number {
       left++;
     }
 
-    // Update result
+    // Update result (adjust based on problem requirements)
     result = Math.max(result, right - left + 1);
   }
 
   return result;
 }
 
-function windowViolatesCondition(windowState: Map<string, number>): boolean {
-  // Implementation depends on specific problem
-  return false;
+// Example condition functions
+function windowViolatesCondition(
+  windowState: Map<string, number>,
+  k: number
+): boolean {
+  // For "at most k distinct characters"
+  return windowState.size > k;
+
+  // For "contains duplicate characters"
+  // return Array.from(windowState.values()).some(count => count > 1);
+
+  // For "exactly k distinct characters"
+  // return windowState.size > k;
+}
+
+// Alternative: Sliding window for subarray with specific sum
+function subarraySum(arr: number[], targetSum: number): number[] {
+  let left = 0;
+  let currentSum = 0;
+
+  for (let right = 0; right < arr.length; right++) {
+    currentSum += arr[right];
+
+    while (currentSum > targetSum && left <= right) {
+      currentSum -= arr[left];
+      left++;
+    }
+
+    if (currentSum === targetSum) {
+      return arr.slice(left, right + 1);
+    }
+  }
+
+  return []; // No subarray found
 }
 ```
 
