@@ -1,4 +1,8 @@
-# Complete Study List
+# LeetCode Problem ROI Analysis
+
+_Based on the Return on Investment framework from [AlgoMonster](https://algo.monster)_
+
+This analysis categorizes problems by their interview frequency vs. learning difficulty.
 
 ## High Return on Investment (Easy to Learn, High Interview Frequency)
 

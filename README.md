@@ -1,6 +1,6 @@
 # Leetcode Labs
 
-Labwork designed to help experiencde developers consitently solve medium and hard leetcode problems.
+Labwork designed to help experienced developers consistently solve medium- and hard-Leetcode problems.
 
 ## Generating New Problems
 
@@ -23,51 +23,51 @@ deno task notebook (or notebook:override)
 
 ### Study Plans
 
-| Plan                                                                  | Duration | Target Audience     | Coverage         | Description                                                                                                                                 |
-| --------------------------------------------------------------------- | -------- | ------------------- | ---------------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
-| [**2-Day Intensive**](coursework/2day-cheatsheet.md)                  | 2 days   | Beginners to Medium | 75% of patterns  | Rapid introduction to core patterns with 17 essential problems. Focus on two pointers, DP basics, graphs, backtracking, and sliding window. |
-| [**3-Day Comprehensive**](coursework/3day-cheatsheet.md)              | 3 days   | Medium level        | 85% of patterns  | Extended foundation building with 28 problems covering arrays, DP, graphs, backtracking, trees, and advanced data structures.               |
-| [**21-Day Medium/Hard Progression**](coursework/21day-medium+hard.md) | 21 days  | Medium to Advanced  | 75-80% coverage  | Progressive difficulty increase focusing on deep pattern understanding rather than problem volume. Ideal for the medium→hard transition.    |
-| [**21-Day Elite (Hard Focus)**](coursework/21day-hard.md)             | 21 days  | Senior Engineers    | 90%+ of patterns | Advanced preparation for elite companies with 6 hours daily commitment. Includes competitive programming and system design integration.     |
+| Plan                                                                   | Duration | Target Audience     | Coverage         | Description                                                                                                                                 |
+| ---------------------------------------------------------------------- | -------- | ------------------- | ---------------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
+| [**2-Day Intensive**](coursework/2-day-cheatsheet.md)                  | 2 days   | Beginners to Medium | 75% of patterns  | Rapid introduction to core patterns with 17 essential problems. Focus on two pointers, DP basics, graphs, backtracking, and sliding window. |
+| [**3-Day Comprehensive**](coursework/3-day-cheatsheet.md)              | 3 days   | Medium level        | 85% of patterns  | Extended foundation building with 28 problems covering arrays, DP, graphs, backtracking, trees, and advanced data structures.               |
+| [**21-Day Medium/Hard Progression**](coursework/21-day-medium+hard.md) | 21 days  | Medium to Advanced  | 75-80% coverage  | Progressive difficulty increase focusing on deep pattern understanding rather than problem volume. Ideal for the medium→hard transition.    |
+| [**21-Day Hard Progression**](coursework/21-day-hard.md)               | 21 days  | Senior Engineers    | 90%+ of patterns | Advanced preparation for elite companies with 6 hours daily commitment. Includes competitive programming and system design integration.     |
 
 ### Reference Materials
 
-| Resource                                                     | Type                   | Purpose          | Description                                                                                                              |
-| ------------------------------------------------------------ | ---------------------- | ---------------- | ------------------------------------------------------------------------------------------------------------------------ |
-| [**ROI Analysis**](coursework/ROI.md)                        | Problem Prioritization | Study Efficiency | Problems categorized by return on investment - which patterns give the highest interview success rate for time invested. |
-| [**Algorithm Templates**](coursework/template-cheetsheet.md) | Code Templates         | Implementation   | Ready-to-use code templates for all major patterns including two pointers, sliding window, DFS/BFS, DP, and more.        |
+| Resource                                                     | Type                   | Purpose          | Description                                                                                                                                              |
+| ------------------------------------------------------------ | ---------------------- | ---------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [**ROI Analysis**](coursework/ROI.md)                        | Problem Prioritization | Study Efficiency | Problems categorized by return on investment based on AlgoMonster's analysis - which patterns give the highest interview success rate for time invested. |
+| [**Algorithm Templates**](coursework/template-cheetsheet.md) | Code Templates         | Implementation   | Ready-to-use code templates for all major patterns including two pointers, sliding window, DFS/BFS, DP, and more.                                        |
 
 ## Resources
 
 ### Core Algorithm Patterns
 
-| Pattern                                                        | Key Applications                        | When to Use                                    |
-| -------------------------------------------------------------- | --------------------------------------- | ---------------------------------------------- |
-| [**Two Pointers**](resources/two-pointer.ipynb)                | Sorted arrays, palindromes, target sums | Problems involving pairs or triplets in arrays |
-| [**Sliding Window**](resources/sliding-window.ipynb)           | Substring/subarray optimization         | Contiguous sequence problems with constraints  |
-| [**Backtracking**](resources/backtracking.ipynb)               | Permutations, combinations, puzzles     | Generate all possible solutions                |
-| [**Dynamic Programming**](resources/dynamic-programming.ipynb) | Optimization problems                   | Optimal substructure + overlapping subproblems |
-| [**Graphs**](resources/graphs.ipynb)                           | DFS, BFS, connectivity                  | Node/edge relationship problems                |
-| [**Monotonic Stack**](resources/montonic-stack.ipynb)          | Next greater/smaller elements           | Stack-based optimization problems              |
+| Pattern                                                       | Key Applications                        | When to Use                                    |
+| ------------------------------------------------------------- | --------------------------------------- | ---------------------------------------------- |
+| [**Two Pointers**](patterns/two-pointer.ipynb)                | Sorted arrays, palindromes, target sums | Problems involving pairs or triplets in arrays |
+| [**Sliding Window**](patterns/sliding-window.ipynb)           | Substring/subarray optimization         | Contiguous sequence problems with constraints  |
+| [**Backtracking**](patterns/backtracking.ipynb)               | Permutations, combinations, puzzles     | Generate all possible solutions                |
+| [**Dynamic Programming**](patterns/dynamic-programming.ipynb) | Optimization problems                   | Optimal substructure + overlapping subproblems |
+| [**Graphs**](patterns/graphs.ipynb)                           | DFS, BFS, connectivity                  | Node/edge relationship problems                |
+| [**Monotonic Stack**](patterns/montonic-stack.ipynb)          | Next greater/smaller elements           | Stack-based optimization problems              |
 
 ### Data Structure Patterns
 
-| Pattern                                             | Key Applications                | When to Use                       |
-| --------------------------------------------------- | ------------------------------- | --------------------------------- |
-| [**Binary Trees**](resources/binary-trees.ipynb)    | Tree traversal, path problems   | Hierarchical data structures      |
-| [**Linked Lists**](resources/linked-list.ipynb)     | Pointer manipulation, cycles    | Sequential data with dynamic size |
-| [**Heap**](resources/heap.ipynb)                    | Priority queues, top-k problems | Need min/max elements efficiently |
-| [**Disjoint Sets**](resources/disjoinit-sets.ipynb) | Union-Find, connectivity        | Dynamic connectivity queries      |
+| Pattern                                            | Key Applications                | When to Use                       |
+| -------------------------------------------------- | ------------------------------- | --------------------------------- |
+| [**Binary Trees**](patterns/binary-trees.ipynb)    | Tree traversal, path problems   | Hierarchical data structures      |
+| [**Linked Lists**](patterns/linked-list.ipynb)     | Pointer manipulation, cycles    | Sequential data with dynamic size |
+| [**Heap**](patterns/heap.ipynb)                    | Priority queues, top-k problems | Need min/max elements efficiently |
+| [**Disjoint Sets**](patterns/disjoinit-sets.ipynb) | Union-Find, connectivity        | Dynamic connectivity queries      |
 
 ### Advanced Techniques
 
-| Pattern                                                         | Key Applications                     | When to Use                             |
-| --------------------------------------------------------------- | ------------------------------------ | --------------------------------------- |
-| [**Topological Sorting**](resources/topological-sorting.ipynb)  | Dependency resolution, scheduling    | Directed acyclic graph ordering         |
-| [**Greedy Algorithm**](resources/greedy-algorithm.ipynb)        | Optimization with local choices      | Optimal substructure with greedy choice |
-| [**Recursion**](resources/recursion.ipynb)                      | Divide and conquer, tree problems    | Self-similar subproblems                |
-| [**Combinatorics**](resources/combinatorics.ipynb)              | Counting problems, probability       | Mathematical counting and arrangements  |
-| [**Prefix/Suffix Arrays**](resources/prefix_suffix_array.ipynb) | Range queries, cumulative operations | Efficient range sum/product queries     |
+| Pattern                                                        | Key Applications                     | When to Use                             |
+| -------------------------------------------------------------- | ------------------------------------ | --------------------------------------- |
+| [**Topological Sorting**](patterns/topological-sorting.ipynb)  | Dependency resolution, scheduling    | Directed acyclic graph ordering         |
+| [**Greedy Algorithm**](patterns/greedy-algorithm.ipynb)        | Optimization with local choices      | Optimal substructure with greedy choice |
+| [**Recursion**](patterns/recursion.ipynb)                      | Divide and conquer, tree problems    | Self-similar subproblems                |
+| [**Combinatorics**](patterns/combinatorics.ipynb)              | Counting problems, probability       | Mathematical counting and arrangements  |
+| [**Prefix/Suffix Arrays**](patterns/prefix_suffix_array.ipynb) | Range queries, cumulative operations | Efficient range sum/product queries     |
 
 ## Trivia
 
