@@ -13,7 +13,7 @@ deno task notebook (or notebook:override)
 ## Getting Started
 
 1. **Assess your current level** using problems from the [ROI guide](./coursework/ROI.md)
-2. **Choose appropriate study plan** based on [time available and target difficulty](#coursework)
+2. **Choose appropriate study plan** based on [algorithms](#algorithms) or [system design](#system-design)
 3. **Set up your environment** with preferred IDE and timer
 4. **Follow the daily schedule** consistently
 5. **Use reference materials** for quick lookup during practice
@@ -21,13 +21,22 @@ deno task notebook (or notebook:override)
 
 ## Coursework
 
-### Study Plans
+### Algorithms
 
-| Plan                                                                      | Duration | Target Audience    | Coverage         | Description                                                                                                                              |
-| ------------------------------------------------------------------------- | -------- | ------------------ | ---------------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
-| [**3-Day Foundation**](coursework/3-day-foundation.md)                    | 3 days   | Medium level       | 85% of patterns  | Extended foundation building with 28 problems covering arrays, DP, graphs, backtracking, trees, and advanced data structures.            |
-| [**21-Day Medium to Hard Progression**](coursework/21-day-medium+hard.md) | 21 days  | Medium to Advanced | 75-80% coverage  | Progressive difficulty increase focusing on deep pattern understanding rather than problem volume. Ideal for the medium→hard transition. |
-| [**21-Day Hard Progression**](coursework/21-day-hard.md)                  | 21 days  | Senior Engineers   | 90%+ of patterns | Advanced preparation for elite companies with 6 hours daily commitment. Includes competitive programming and system design integration.  |
+| Plan                                                                   | Duration | Target Audience    | Coverage         | Description                                                                                                                              |
+| ---------------------------------------------------------------------- | -------- | ------------------ | ---------------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
+| [**3-Day Algorithm Fundamentals**](coursework/3-day-foundation.md)     | 3 days   | Medium level       | 85% of patterns  | Extended foundation building with 28 problems covering arrays, DP, graphs, backtracking, trees, and advanced data structures.            |
+| [**21-Day Medium/Hard Progression**](coursework/21-day-medium+hard.md) | 21 days  | Medium to Advanced | 75-80% coverage  | Progressive difficulty increase focusing on deep pattern understanding rather than problem volume. Ideal for the medium→hard transition. |
+| [**21-Day Hard Progression**](coursework/21-day-hard.md)               | 21 days  | Senior Engineers   | 90%+ of patterns | Advanced preparation for elite companies with 6 hours daily commitment. Includes competitive programming and system design integration.  |
+
+### System Design
+
+| Plan                                                               | Duration | Target Audience            | Coverage                | Description                                                                                                                                               |
+| ------------------------------------------------------------------ | -------- | -------------------------- | ----------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [**3-Day System Design Fundamentals**](coursework/3-day-system.md) | 3 days   | Algorithm-strong engineers | Interview essentials    | Core concepts, 6 case studies, and mock interviews. Covers scalability, databases, caching, and communication patterns for immediate interview readiness. |
+| [**21-Day System Design Mastery**](coursework/21-day-system.md)    | 21 days  | Senior+ engineers          | Comprehensive expertise | Advanced architecture skills for Staff+ roles. Covers distributed systems, specialized domains (fintech, gaming, ML), and company-specific preparation.   |
+
+## Resources
 
 ### Reference Materials
 
@@ -35,8 +44,6 @@ deno task notebook (or notebook:override)
 | ------------------------------------------------------------ | ---------------------- | ---------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [**ROI Analysis**](coursework/ROI.md)                        | Problem Prioritization | Study Efficiency | Problems categorized by return on investment based on AlgoMonster's analysis - which patterns give the highest interview success rate for time invested. |
 | [**Algorithm Templates**](coursework/template-cheetsheet.md) | Code Templates         | Implementation   | Ready-to-use code templates for all major patterns including two pointers, sliding window, DFS/BFS, DP, and more.                                        |
-
-## Resources
 
 ### Core Algorithm Patterns
 
