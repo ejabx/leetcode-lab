@@ -23,12 +23,11 @@ deno task notebook (or notebook:override)
 
 ### Study Plans
 
-| Plan                                                                   | Duration | Target Audience     | Coverage         | Description                                                                                                                                 |
-| ---------------------------------------------------------------------- | -------- | ------------------- | ---------------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
-| [**2-Day Intensive**](coursework/2-day-cheatsheet.md)                  | 2 days   | Beginners to Medium | 75% of patterns  | Rapid introduction to core patterns with 17 essential problems. Focus on two pointers, DP basics, graphs, backtracking, and sliding window. |
-| [**3-Day Comprehensive**](coursework/3-day-cheatsheet.md)              | 3 days   | Medium level        | 85% of patterns  | Extended foundation building with 28 problems covering arrays, DP, graphs, backtracking, trees, and advanced data structures.               |
-| [**21-Day Medium/Hard Progression**](coursework/21-day-medium+hard.md) | 21 days  | Medium to Advanced  | 75-80% coverage  | Progressive difficulty increase focusing on deep pattern understanding rather than problem volume. Ideal for the medium→hard transition.    |
-| [**21-Day Hard Progression**](coursework/21-day-hard.md)               | 21 days  | Senior Engineers    | 90%+ of patterns | Advanced preparation for elite companies with 6 hours daily commitment. Includes competitive programming and system design integration.     |
+| Plan                                                                      | Duration | Target Audience    | Coverage         | Description                                                                                                                              |
+| ------------------------------------------------------------------------- | -------- | ------------------ | ---------------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
+| [**3-Day Foundation**](coursework/3-day-foundation.md)                    | 3 days   | Medium level       | 85% of patterns  | Extended foundation building with 28 problems covering arrays, DP, graphs, backtracking, trees, and advanced data structures.            |
+| [**21-Day Medium to Hard Progression**](coursework/21-day-medium+hard.md) | 21 days  | Medium to Advanced | 75-80% coverage  | Progressive difficulty increase focusing on deep pattern understanding rather than problem volume. Ideal for the medium→hard transition. |
+| [**21-Day Hard Progression**](coursework/21-day-hard.md)                  | 21 days  | Senior Engineers   | 90%+ of patterns | Advanced preparation for elite companies with 6 hours daily commitment. Includes competitive programming and system design integration.  |
 
 ### Reference Materials
 
