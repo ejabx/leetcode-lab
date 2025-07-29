@@ -2,6 +2,18 @@
 
 Labwork designed to help experienced developers consistently solve medium- and hard-Leetcode problems.
 
+- [**Generating New Problems**](#generating-new-problems)
+- [**Getting Started**](#getting-started)
+- [**Coursework**](#coursework)
+  - [**Algorithms**](#algorithms)
+  - [**System Design**](#system-design)
+- [**Resources**](#resources)
+  - [**Reference Materials**](#reference-materials)
+  - [**Core Algorithm Patterns**](#core-algorithm-patterns)
+  - [**Data Structure Patterns**](#data-structure-patterns)
+  - [**Advanced Techniques**](#advanced-techniques)
+- [**Trivia**](#trivia)
+
 ## Generating New Problems
 
 Put notebook info in `bin\notebook.yaml` file.
