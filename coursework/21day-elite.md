@@ -1,4 +1,4 @@
-# **LeetCode Mastery Guide for Elites**
+# **LeetCode Mastery Guide for Faang**
 
 ## **Understanding Your Unique Position**
 
