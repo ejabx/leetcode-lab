@@ -36,6 +36,8 @@ deno task notebook (or notebook:override)
 
 ### Preparation
 
+![Algorithms](./patterns/algorithms.png)
+
 ### 1. [Two Pointers](patterns/two-pointer.md#template-patterns)
 
 - **When to use**: Sorted arrays, palindromes, target sum problems
@@ -63,6 +65,8 @@ deno task notebook (or notebook:override)
 ### 5. [Backtracking](patterns/backtracking.md#the-backtracking-template)
 
 - **When to use**: Generate all combinations/permutations
+  - When the order doesn't matter, it is a _combination_
+  - When the order does matter it is a _permutation_
 - **Template**: Make choice → recurse → undo choice
 - **Optimization**: Early pruning for efficiency
 
