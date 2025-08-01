@@ -1,5 +1,7 @@
 # Essential LeetCode Problems: 3-Day Study Plan
 
+[Prepare](../README.md#preparation) if you need to brush up on algorithms.
+
 ## Day 1: Arrays, Two Pointers & Sliding Window (7-8 hours)
 
 ### Morning Session (2.5-3 hours): Array Fundamentals & Two Pointers
@@ -218,48 +220,6 @@
    - Note the key technique/pattern
    - Connect to similar problems
 
----
-
-## Key Patterns to Master
-
-### 1. [Two Pointers](../resources/two-pointer.ipynb)
-
-- **When to use**: Sorted arrays, palindromes, target sum problems
-- **Variations**: Same direction, opposite direction, fast/slow
-- **Template**: Start with pointers, move based on comparison logic
-
-### 2. [Sliding Window](../resources/sliding-window.ipynb)
-
-- **When to use**: Substring/subarray problems with constraints
-- **Variations**: Fixed size, variable size, character frequency
-- **Template**: Expand until invalid, then contract until valid
-
-### 3. [Dynamic Programming](../resources/dynamic-programming.ipynb)
-
-- **Identify**: Optimal substructure + overlapping subproblems
-- **Approach**: Define state → find recurrence → implement
-- **Common patterns**: Linear DP, 2D DP, sequence DP
-
-### 4. [Graph Algorithms](../resources/graphs.ipynb)
-
-- **DFS**: Path finding, backtracking, connected components
-- **BFS**: Shortest path, level-order traversal
-- **Key**: Choose based on problem requirements
-
-### 5. [Backtracking](../resources/backtracking.ipynb)
-
-- **When to use**: Generate all combinations/permutations
-- **Template**: Make choice → recurse → undo choice
-- **Optimization**: Early pruning for efficiency
-
-### 6. [Tree Algorithms](../resources/binary-trees.ipynb)
-
-- **Patterns**: Tree DP, serialization, construction
-- **Key techniques**: Global vs local optimization
-- **Applications**: Path problems, structure problems
-
----
-
 ## Daily Success Metrics
 
 ### After Day 1, you should be able to:
@@ -306,16 +266,3 @@
 2. **Week 3**: Advanced graph algorithms (Union Find, Dijkstra)
 3. **Week 4**: System design and optimization techniques
 4. **Week 5**: Mock interviews and timed practice
-
----
-
-## Final Tips for Maximum Success
-
-1. **Maintain consistent pace** - Don't rush through problems
-2. **Focus on understanding over speed** - Patterns transfer to new problems
-3. **Code solutions by hand first** - Builds implementation confidence
-4. **Explain your approach aloud** - Simulates interview conditions
-5. **Track your progress** - Note which patterns you struggle with
-6. **Review mistakes thoroughly** - Most learning happens during debugging
-7. **Take breaks between sessions** - Prevents mental fatigue
-8. **Practice drawing solutions** - Helps with communication in interviews

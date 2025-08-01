@@ -5,6 +5,7 @@ Labwork designed to help experienced developers consistently solve medium- and h
 - [**Generating New Problems**](#generating-new-problems)
 - [**Getting Started**](#getting-started)
 - [**Coursework**](#coursework)
+  - [**Preparation**](#preparation)
   - [**Algorithms**](#algorithms)
   - [**System Design**](#system-design)
 - [**Resources**](#resources)
@@ -24,7 +25,7 @@ deno task notebook (or notebook:override)
 
 ## Getting Started
 
-1. **Assess your current level** using problems from the [ROI guide](./coursework/ROI.md)
+1. **Assess your current level** using problems from the [ROI guide](./coursework/roi.md)
 2. **Choose appropriate study plan** based on [algorithms](#algorithms) or [system design](#system-design)
 3. **Set up your environment** with preferred IDE and timer
 4. **Follow the daily schedule** consistently
@@ -32,6 +33,44 @@ deno task notebook (or notebook:override)
 6. **Track progress** using the success metrics provided
 
 ## Coursework
+
+### Preparation
+
+### 1. [Two Pointers](../patterns/two-pointer.md#template-patterns)
+
+- **When to use**: Sorted arrays, palindromes, target sum problems
+- **Variations**: Same direction, opposite direction, fast/slow
+- **Template**: Start with pointers, move based on comparison logic
+
+### 2. [Sliding Window](../patterns/sliding-window.md#template-patterns)
+
+- **When to use**: Substring/subarray problems with constraints
+- **Variations**: Fixed size, variable size, character frequency
+- **Template**: Expand until invalid, then contract until valid
+
+### 3. [Dynamic Programming](../patterns/dynamic-programming.md#common-pattern-templates)
+
+- **Identify**: Optimal substructure + overlapping subproblems
+- **Approach**: Define state → find recurrence → implement
+- **Common patterns**: Linear DP, 2D DP, sequence DP
+
+### 4. [Graph Algorithms](../patterns/graphs.md#common-leetcode-patterns)
+
+- **DFS**: Path finding, backtracking, connected components
+- **BFS**: Shortest path, level-order traversal
+- **Key**: Choose based on problem requirements
+
+### 5. [Backtracking](../patterns/backtracking.md#the-backtracking-template)
+
+- **When to use**: Generate all combinations/permutations
+- **Template**: Make choice → recurse → undo choice
+- **Optimization**: Early pruning for efficiency
+
+### 6. [Tree Algorithms](../patterns/binary-trees.md#common-patterns-and-techniques)
+
+- **Patterns**: Tree DP, serialization, construction
+- **Key techniques**: Global vs local optimization
+- **Applications**: Path problems, structure problems
 
 ### Algorithms
 
@@ -54,38 +93,38 @@ deno task notebook (or notebook:override)
 
 | Resource                                                     | Type                   | Purpose          | Description                                                                                                                                              |
 | ------------------------------------------------------------ | ---------------------- | ---------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [**ROI Analysis**](coursework/ROI.md)                        | Problem Prioritization | Study Efficiency | Problems categorized by return on investment based on AlgoMonster's analysis - which patterns give the highest interview success rate for time invested. |
-| [**Algorithm Templates**](coursework/template-cheetsheet.md) | Code Templates         | Implementation   | Ready-to-use code templates for all major patterns including two pointers, sliding window, DFS/BFS, DP, and more.                                        |
+| [**ROI Analysis**](coursework/roi.md)                        | Problem Prioritization | Study Efficiency | Problems categorized by return on investment based on AlgoMonster's analysis - which patterns give the highest interview success rate for time invested. |
+| [**Algorithm Templates**](coursework/algorithm-templates.md) | Code Templates         | Implementation   | Ready-to-use code templates for all major patterns including two pointers, sliding window, DFS/BFS, DP, and more.                                        |
 
 ### Core Algorithm Patterns
 
-| Pattern                                                       | Key Applications                        | When to Use                                    |
-| ------------------------------------------------------------- | --------------------------------------- | ---------------------------------------------- |
-| [**Two Pointers**](patterns/two-pointer.ipynb)                | Sorted arrays, palindromes, target sums | Problems involving pairs or triplets in arrays |
-| [**Sliding Window**](patterns/sliding-window.ipynb)           | Substring/subarray optimization         | Contiguous sequence problems with constraints  |
-| [**Backtracking**](patterns/backtracking.ipynb)               | Permutations, combinations, puzzles     | Generate all possible solutions                |
-| [**Dynamic Programming**](patterns/dynamic-programming.ipynb) | Optimization problems                   | Optimal substructure + overlapping subproblems |
-| [**Graphs**](patterns/graphs.ipynb)                           | DFS, BFS, connectivity                  | Node/edge relationship problems                |
-| [**Monotonic Stack**](patterns/montonic-stack.ipynb)          | Next greater/smaller elements           | Stack-based optimization problems              |
+| Pattern                                                    | Key Applications                        | When to Use                                    |
+| ---------------------------------------------------------- | --------------------------------------- | ---------------------------------------------- |
+| [**Two Pointers**](patterns/two-pointer.md)                | Sorted arrays, palindromes, target sums | Problems involving pairs or triplets in arrays |
+| [**Sliding Window**](patterns/sliding-window.md)           | Substring/subarray optimization         | Contiguous sequence problems with constraints  |
+| [**Backtracking**](patterns/backtracking.md)               | Permutations, combinations, puzzles     | Generate all possible solutions                |
+| [**Dynamic Programming**](patterns/dynamic-programming.md) | Optimization problems                   | Optimal substructure + overlapping subproblems |
+| [**Graphs**](patterns/graphs.md)                           | DFS, BFS, connectivity                  | Node/edge relationship problems                |
+| [**Monotonic Stack**](patterns/montonic-stack.md)          | Next greater/smaller elements           | Stack-based optimization problems              |
 
 ### Data Structure Patterns
 
-| Pattern                                            | Key Applications                | When to Use                       |
-| -------------------------------------------------- | ------------------------------- | --------------------------------- |
-| [**Binary Trees**](patterns/binary-trees.ipynb)    | Tree traversal, path problems   | Hierarchical data structures      |
-| [**Linked Lists**](patterns/linked-list.ipynb)     | Pointer manipulation, cycles    | Sequential data with dynamic size |
-| [**Heap**](patterns/heap.ipynb)                    | Priority queues, top-k problems | Need min/max elements efficiently |
-| [**Disjoint Sets**](patterns/disjoinit-sets.ipynb) | Union-Find, connectivity        | Dynamic connectivity queries      |
+| Pattern                                         | Key Applications                | When to Use                       |
+| ----------------------------------------------- | ------------------------------- | --------------------------------- |
+| [**Binary Trees**](patterns/binary-trees.md)    | Tree traversal, path problems   | Hierarchical data structures      |
+| [**Linked Lists**](patterns/linked-list.md)     | Pointer manipulation, cycles    | Sequential data with dynamic size |
+| [**Heap**](patterns/heap.md)                    | Priority queues, top-k problems | Need min/max elements efficiently |
+| [**Disjoint Sets**](patterns/disjoinit-sets.md) | Union-Find, connectivity        | Dynamic connectivity queries      |
 
 ### Advanced Techniques
 
-| Pattern                                                        | Key Applications                     | When to Use                             |
-| -------------------------------------------------------------- | ------------------------------------ | --------------------------------------- |
-| [**Topological Sorting**](patterns/topological-sorting.ipynb)  | Dependency resolution, scheduling    | Directed acyclic graph ordering         |
-| [**Greedy Algorithm**](patterns/greedy-algorithm.ipynb)        | Optimization with local choices      | Optimal substructure with greedy choice |
-| [**Recursion**](patterns/recursion.ipynb)                      | Divide and conquer, tree problems    | Self-similar subproblems                |
-| [**Combinatorics**](patterns/combinatorics.ipynb)              | Counting problems, probability       | Mathematical counting and arrangements  |
-| [**Prefix/Suffix Arrays**](patterns/prefix_suffix_array.ipynb) | Range queries, cumulative operations | Efficient range sum/product queries     |
+| Pattern                                                       | Key Applications                     | When to Use                             |
+| ------------------------------------------------------------- | ------------------------------------ | --------------------------------------- |
+| [**Topological Sorting**](patterns/topological-sorting.ipynb) | Dependency resolution, scheduling    | Directed acyclic graph ordering         |
+| [**Greedy Algorithm**](patterns/greedy-algorithm.md)          | Optimization with local choices      | Optimal substructure with greedy choice |
+| [**Recursion**](patterns/recursion.md)                        | Divide and conquer, tree problems    | Self-similar subproblems                |
+| [**Combinatorics**](patterns/combinatorics.md)                | Counting problems, probability       | Mathematical counting and arrangements  |
+| [**Prefix/Suffix Arrays**](patterns/prefix_suffix_array.md)   | Range queries, cumulative operations | Efficient range sum/product queries     |
 
 ## Trivia
 
