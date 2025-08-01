@@ -65,8 +65,8 @@ deno task notebook (or notebook:override)
 ### 5. [Backtracking](patterns/backtracking.md#the-backtracking-template)
 
 - **When to use**: Generate all combinations/permutations
-  - When the order doesn't matter, it is a _combination_
-  - When the order does matter it is a _permutation_
+  - Combination: _Selecting_ when the order _doesn't_ matter.
+  - Permutation: _Ordering_ when the order _does_ matter
 - **Template**: Make choice → recurse → undo choice
 - **Optimization**: Early pruning for efficiency
 
