@@ -36,37 +36,37 @@ deno task notebook (or notebook:override)
 
 ### Preparation
 
-### 1. [Two Pointers](../patterns/two-pointer.md#template-patterns)
+### 1. [Two Pointers](patterns/two-pointer.md#template-patterns)
 
 - **When to use**: Sorted arrays, palindromes, target sum problems
 - **Variations**: Same direction, opposite direction, fast/slow
 - **Template**: Start with pointers, move based on comparison logic
 
-### 2. [Sliding Window](../patterns/sliding-window.md#template-patterns)
+### 2. [Sliding Window](patterns/sliding-window.md#template-patterns)
 
 - **When to use**: Substring/subarray problems with constraints
 - **Variations**: Fixed size, variable size, character frequency
 - **Template**: Expand until invalid, then contract until valid
 
-### 3. [Dynamic Programming](../patterns/dynamic-programming.md#common-pattern-templates)
+### 3. [Dynamic Programming](patterns/dynamic-programming.md#common-pattern-templates)
 
 - **Identify**: Optimal substructure + overlapping subproblems
 - **Approach**: Define state → find recurrence → implement
 - **Common patterns**: Linear DP, 2D DP, sequence DP
 
-### 4. [Graph Algorithms](../patterns/graphs.md#common-leetcode-patterns)
+### 4. [Graph Algorithms](patterns/graphs.md#common-leetcode-patterns)
 
 - **DFS**: Path finding, backtracking, connected components
 - **BFS**: Shortest path, level-order traversal
 - **Key**: Choose based on problem requirements
 
-### 5. [Backtracking](../patterns/backtracking.md#the-backtracking-template)
+### 5. [Backtracking](patterns/backtracking.md#the-backtracking-template)
 
 - **When to use**: Generate all combinations/permutations
 - **Template**: Make choice → recurse → undo choice
 - **Optimization**: Early pruning for efficiency
 
-### 6. [Tree Algorithms](../patterns/binary-trees.md#common-patterns-and-techniques)
+### 6. [Tree Algorithms](patterns/binary-trees.md#common-patterns-and-techniques)
 
 - **Patterns**: Tree DP, serialization, construction
 - **Key techniques**: Global vs local optimization
