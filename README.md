@@ -34,10 +34,6 @@ deno task notebook (or notebook:override)
 
 ## Coursework
 
-### Preparation
-
-![Algorithms](./patterns/algorithms.png)
-
 ### 1. [Two Pointers](patterns/two-pointer.md#template-patterns)
 
 - **When to use**: Sorted arrays, palindromes, target sum problems
@@ -128,7 +124,7 @@ deno task notebook (or notebook:override)
 | [**Greedy Algorithm**](patterns/greedy-algorithm.md)          | Optimization with local choices      | Optimal substructure with greedy choice |
 | [**Recursion**](patterns/recursion.md)                        | Divide and conquer, tree problems    | Self-similar subproblems                |
 | [**Combinatorics**](patterns/combinatorics.md)                | Counting problems, probability       | Mathematical counting and arrangements  |
-| [**Prefix/Suffix Arrays**](patterns/prefix_suffix_array.md)   | Range queries, cumulative operations | Efficient range sum/product queries     |
+| [**Prefix/Suffix Arrays**](patterns/prefix-suffix-array.md)   | Range queries, cumulative operations | Efficient range sum/product queries     |
 
 ## Trivia
 
